@@ -1,0 +1,6 @@
+venv
+**/.*
+**/*__*
+**/*.save
+!**/.gitignore
+!.travis.yml

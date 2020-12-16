@@ -1,0 +1,232 @@
+[
+  {
+    "displayName": "de",
+    "questionFlairs": [
+      "Frage/Diskussion",
+      "Hilfe"
+    ],
+    "allowAMAInOtherFlairs": true
+  },
+  {
+    "displayName": "Austria",
+    "questionFlairs": [ "Frage" ],
+    "amaFlairs": [ "AMA" ],
+    "allowAMAInOtherFlairs": true
+  },
+  {
+    "displayName": "de_IAmA",
+    "amaFlairs": [ "AMA" ]
+  },
+  {
+    "displayName": "de_EDV",
+    "questionFlairs": [
+      "PC Support",
+      "Kaufberatung",
+      "Diskussion",
+      "Allgemein",
+      "PC Eigenbau",
+      "Hosting",
+      "Netzwerk",
+      "Hardware",
+      "Programmieren",
+      "Internet",
+      "Peripherie",
+      "Smart Home"
+    ],
+    "amaFlairs": [
+      "Wöchentlich"
+    ]
+  },
+  {
+    "displayName": "buecher",
+    "questionFlairs": [ "Buch gesucht", "Buchempfehlung gesucht", "Diskussion", "Rat gesucht" ]
+  },
+  {
+    "displayName": "VeganDE",
+    "questionFlairs": [
+      "Frage",
+      "Diskussion"
+    ]
+  },
+  {
+    "displayName": "Kochen",
+    "questionFlairs": [ "Diskussion", "Hilfe" ]
+  },
+  {
+    "displayName": "Weibsvolk",
+    "questionFlairs": [ "Ich brauche Hilfe", "Diskussion" ],
+    "amaFlairs": [ "Ask Me Anything" ]
+  },
+  {
+    "displayName": "Garten",
+    "questionFlairs": [ "Ich brauche Hilfe", "Diskussion" ]
+  },
+  {
+    "displayName": "Dachschaden",
+    "questionFlairs": [ "Frage/Hilfe" ],
+    "amaFlairs": ["AMA - vorbei", "vorbei", "VORBEI"]
+  },
+  {
+    "displayName": "FitnessDE",
+    "questionFlairs": [ "Frage", "Diskussion" ]
+  },
+  {
+    "displayName": "GermanRap",
+    "questionFlairs": [
+      "Diskussion",
+      "Frage"
+    ]
+  },
+  {
+    "displayName": "Filme",
+    "questionFlairs": [
+      "Diskussion",
+      "Frage"
+    ]
+  },
+  {
+    "displayName": "rocketbeans",
+    "questionFlairs": [ "Frage", "Diskussion" ],
+    "amaFlairs": [ "AmA" ]
+  },
+  {
+    "displayName": "PietSmiet",
+    "questionFlairs": [ "Frage", "Diskussion" ]
+  },
+  {
+    "displayName": "Gronkh",
+    "questionFlairs": [ "Frage", "Talk" ]
+  },
+  {
+    "displayName": "zimmerpflanzen",
+    "questionFlairs": [ "GertTalk", "Ratgeber" ]
+  },
+  {
+    "displayName": "mannheim",
+    "amaFlairs": [ "Frage / Diskussion" ]
+  },
+  {
+    "displayName": "famoseworte",
+    "questionFlairs": [ "Frage" ]
+  },
+  {
+    "displayName": "deutschland",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "alleFragenAuchDumme",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "informatik",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "mathe",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Physik",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Chemie",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Finanzen",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "FragReddit",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "LegaladviceGerman",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Trennungsfragen",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "fernsehen",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "recht",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Mopped",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "self_de",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "datenschutz",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "de_IT",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Geschichte",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Wissenschaft",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "selbermachen",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "grillen",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Bundeswehr",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "ketode",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Fahrrad",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "graz",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "kaernten",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "klagenfurt",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Tirol",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "Vorarlberg",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "wien",
+    "ignoreFlairs": true
+  },
+  {
+    "displayName": "jwd",
+    "ignoreFlairs": true
+  }
+]
