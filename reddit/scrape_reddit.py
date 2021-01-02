@@ -1,10 +1,11 @@
 from json import load, dump
 from multiprocessing import Queue, Process
 from os import makedirs
+from os.path import join, isfile
 from re import search, sub as re_sub, IGNORECASE
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional, Tuple
 
-from requests import get
+from requests_retry_on_exceptions import get
 
 
 def is_ama_submission(submission: Dict[str, Any], sub: Dict[str, Any]) -> bool:
@@ -31,6 +32,29 @@ def is_ama_submission(submission: Dict[str, Any], sub: Dict[str, Any]) -> bool:
     return False
 
 
+def has_proper_text(text: Optional[str], text_html: Optional[str]) -> bool:
+    """
+    Checks whether a post contains a text that is usable for the dataset.
+    Contains generic validation suitable for submission and comment texts.
+    :param text: The normal (Markdown) version of the text
+    :param text_html: The HTML version of the text
+    :return:
+    """
+    # Do not use a removed or deleted posts
+    if not text or text in ["[removed]", "[deleted]"]:
+        return False
+    # Ignore all posts which include hyperlinks including reddit-specifics like `r/all` (very coarse)
+    if text_html is not None and '&lt;a href="' in text_html:
+        return False
+    # Ignore sarcasm
+    if "/s" in text or "\s" in text:
+        return False
+    # Ignore upper-case rage
+    if search("[A-Z]{5,}", text):
+        return False
+    return True
+
+
 def is_proper_submission(
     submission: Dict[str, Any], sub: Dict[str, Any], blacklist_flairs=[]
 ) -> bool:
@@ -41,8 +65,7 @@ def is_proper_submission(
     :param blacklist_flairs: Flairs which should be ignored
     :return:
     """
-    # Do not use a removed or deleted submissions
-    if submission.get("selftext") in ["[removed]", "[deleted]"]:
+    if not has_proper_text(submission.get("selftext"), submission.get("selftext_html")):
         return False
     # Meta posts are often moderation related and not really relevant
     if submission.get("is_meta"):
@@ -74,48 +97,44 @@ def is_proper_comment(comment: Dict[str, Any]) -> bool:
     :param comment: A reddit comment
     :return:
     """
-    body = comment["data"]["body"]
+    body = comment["data"].get("body")
     # Do not use a removed or deleted comments
-    if body in ["[removed]", "[deleted]"]:
+    if not has_proper_text(body, comment["data"].get("body_html")):
+        return False
+    # Ignore empty text
+    if body.isspace():
         return False
     if not has_enough_upvotes(comment["data"]):
         return False
+    # Ignore comments by mods, which are often about meta issues
+    # if comment["data"].get("distinguished"):
+    #    return False
     # Ignore top-level comments without replies
     if comment["data"]["depth"] == 0 and (
         comment["data"].get("replies")
         and len(comment["data"]["replies"]["data"]["children"]) < 1
     ):
         return False
-    # Ignore all comments which include hyperlinks (also reddit-specifics like `r/all`)
-    if '&gt;&lt;a href="' in body:
-        return False
     # Attempt to ignore comments which include bot commands
     if "remindme!" in body.lower():
-        return False
-    # Ignore sarcasm
-    if "/s" in body or "\s" in body:
-        return False
-    # Ignore empty text
-    if body.isspace():
-        return False
-    # Ignore upper-case rage
-    if search("[A-Z]{5,}", body):
         return False
     return True
 
 
 def filter_submissions(
     data: List[Dict[str, Any]], sub: Dict[str, Any], blacklist_flairs=[]
-) -> List[str]:
+) -> List[Tuple[str, int]]:
     """
     Filters all submissions which should be used for the dataset.
     :param data: The list of submissions
     :param sub: The subreddit specification
     :param blacklist_flairs: Flairs which should be ignored
-    :return: The permalinks of all proper submissions
+    :return: The permalinks and creation dates of all proper submissions
     """
     return [
-        s["permalink"] for s in data if is_proper_submission(s, sub, blacklist_flairs)
+        (s["permalink"], s["created_utc"])
+        for s in data
+        if is_proper_submission(s, sub, blacklist_flairs)
     ]
 
 
@@ -176,8 +195,8 @@ def traverse_dialog(
         (
             r
             for r in replies
-            if (comment_is_user and r["data"]["author"] == sys)
-            or (not comment_is_user and r["data"]["author"] == user)
+            if (comment_is_user and r["data"].get("author") == sys)
+            or (not comment_is_user and r["data"].get("author") == user)
         ),
         None,
     )
@@ -237,24 +256,28 @@ def retrieve_dialogs(
     return dialogs
 
 
-def write_output(queue: Queue, top_dir: str):
+def write_output(queue: Queue, top_dir: str, cache_dir: Optional[str] = None):
     """
     Consumes processed dialog turns from a queue and writes them into a directory.
     An individual file will be used for each subreddit.
     :param queue: The queue to wait on for new data. Should output dialog JSON or None if the process is finished
     :param top_dir: The directory used to write the data to
+    :param cache_dir: The directory used to cache timestamps
     :return:
     """
     while True:
         item = queue.get()
         print(item)
         if item is None:
-            continue
-        sub, dialogs = item
+            break
+        sub, last_timestamp, dialogs = item
         with open(f"{top_dir}/{sub}.json", "a") as file:
             for dialog in dialogs:
                 dump(dialog, file)
                 file.write("\n")
+        if cache_dir:
+            with open(join(cache_dir, sub + ".txt"), "w") as file:
+                file.write(str(last_timestamp))
 
 
 def process_subreddit(
@@ -263,12 +286,14 @@ def process_subreddit(
     queue: Queue,
     text_maxlen=1024,
     blacklist_flairs=[],
+    last_timestamp: Optional[int] = None,
 ):
-    last_time = None
     submissions = []
     while True:
         request_url = (
-            url_template + f"&before={last_time}" if last_time else url_template
+            url_template + f"&after={last_timestamp}"
+            if last_timestamp
+            else url_template
         )
         response = get(request_url)
         if response.ok:
@@ -277,28 +302,30 @@ def process_subreddit(
                 break
             new_submissions = filter_submissions(data, sub, blacklist_flairs)
             submissions.extend(new_submissions)
-            last_time = response.json()["data"][-1]["created_utc"]
+            last_timestamp = response.json()["data"][-1]["created_utc"]
 
     url_template = "https://np.reddit.com"
-    for permalink in submissions:
-        response = get(url_template + permalink + ".json?limit=1000")
+    for submission in submissions:
+        response = get(url_template + submission[0] + ".json?limit=1000")
         if not response.ok:
             continue
         new_dialogs = retrieve_dialogs(response.json(), sub, text_maxlen)
-        queue.put((sub["displayName"], new_dialogs))
+        queue.put((sub["displayName"], submission[1], new_dialogs))
 
 
 def main():
     url = "https://api.pushshift.io/reddit"
     output_dir = "../data"
     makedirs(output_dir, exist_ok=True)
+    cache_dir = join(output_dir, "cache")
+    makedirs(output_dir + "/cache", exist_ok=True)
     blacklist_flairs = ["Meme", "Humor"]
     text_maxlength = 1024
     file_name = "subreddits-de.json"
     with open(file_name, "r") as file:
         subs = load(file)
     output_queue = Queue()
-    consumer = Process(target=write_output, args=(output_queue, output_dir))
+    consumer = Process(target=write_output, args=(output_queue, output_dir, cache_dir))
     consumer.start()
     pool = []
     # Only fields explicitly specified here will be requested to save bandwith
@@ -314,13 +341,25 @@ def main():
         "selftext",
     ]
     for sub in subs:
+        cache_name = f"{cache_dir}/{sub['displayName']}.txt"
+        last_timestamp = None
+        if isfile(cache_name):
+            with open(cache_name) as file:
+                last_timestamp = file.read()
         url_template = (
             url
-            + f"/search/submission?subreddit={sub['displayName']}&size=100&fields={','.join(fields)}"
+            + f"/search/submission?subreddit={sub['displayName']}&size=100&sort=asc&fields={','.join(fields)}"
         )
         p = Process(
             target=process_subreddit,
-            args=(sub, url_template, output_queue, text_maxlength, blacklist_flairs),
+            args=(
+                sub,
+                url_template,
+                output_queue,
+                text_maxlength,
+                blacklist_flairs,
+                last_timestamp,
+            ),
         )
         p.start()
         pool.append(p)
