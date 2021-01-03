@@ -200,33 +200,5 @@
   {
     "displayName": "Fahrrad",
     "ignoreFlairs": true
-  },
-  {
-    "displayName": "graz",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "kaernten",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "klagenfurt",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "Tirol",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "Vorarlberg",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "wien",
-    "ignoreFlairs": true
-  },
-  {
-    "displayName": "jwd",
-    "ignoreFlairs": true
   }
 ]
