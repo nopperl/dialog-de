@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+from argparse import ArgumentParser
 from json import load, dump
 from multiprocessing import Queue, Process
 from os import makedirs
@@ -6,6 +8,15 @@ from re import search, sub as re_sub, IGNORECASE
 from typing import List, Dict, Any, Optional, Tuple
 
 from requests_retry_on_exceptions import get
+
+
+def is_error_message(json: Dict[str, Any]) -> bool:
+    """
+    Checks whether the given JSON is an error message
+    :param json: The JSON returned by a request as dictionary
+    :return:
+    """
+    return "error" in json
 
 
 def is_ama_submission(submission: Dict[str, Any], sub: Dict[str, Any]) -> bool:
@@ -32,7 +43,7 @@ def is_ama_submission(submission: Dict[str, Any], sub: Dict[str, Any]) -> bool:
     return False
 
 
-def has_proper_text(text: Optional[str], text_html: Optional[str]) -> bool:
+def has_proper_text(text: Optional[str], text_html: Optional[str] = None) -> bool:
     """
     Checks whether a post contains a text that is usable for the dataset.
     Contains generic validation suitable for submission and comment texts.
@@ -144,7 +155,7 @@ def has_enough_upvotes(body: Dict[str, Any]) -> bool:
     :param body: Either a submission or a comment
     :return:
     """
-    return body["score"] > 1
+    return body["score"] > 0
 
 
 def traverse_dialog(
@@ -180,7 +191,7 @@ def traverse_dialog(
     sender = "user" if comment_is_user else "sys"
     # If the text contains a quote, reencode it in a way better suited to learning it
     if "&lt;blockquote&gt;" in comment["data"]["body_html"]:
-        re_sub(r"(.*)\&gt\;(.*)\n(.*)", r"\1[QUOTE]\2[QUOTE]\3", text)
+        text = re_sub(r"(.*)\&gt\;(.*)\n(.*)", r"\1[QUOTE] \2 [QUOTE]\3", text)
     turns.append({"sender": sender, "text": text})
     if not comment["data"].get("replies"):
         return turns
@@ -188,7 +199,9 @@ def traverse_dialog(
     # At some length, the API response cuts the chain off. Therefore, the replies have to be requested along the chain
     if len(replies) == 1 and replies[0]["kind"] == "more":
         response = get(request_url + comment["data"]["id"] + ".json")
-        replies = response.json()[1]["data"]["children"]
+        js = response.json()
+        if isinstance(js, list) and len(js) >= 2 and js[1]["kind"] == "Listing":
+            replies = js[1]["data"]["children"]
     # Only retrieves the next direct response from the correspondent
     # Could potentially traverse all replies to see if sys has responded to someone else as well in AMA mode
     reply = next(
@@ -206,47 +219,58 @@ def traverse_dialog(
 
 
 def retrieve_dialogs(
-    js: List[Dict[str, Any]], sub: Dict[str, Any], text_maxlen=1024
+    js: List[Dict[str, Any]], sub: Dict[str, Any], top_url: str, text_maxlen=1024
 ) -> List[Dict[str, Any]]:
     """
     Retrieves all dialogs of a submission.
     :param js: The submission site JSON dict containing both submission and comments
     :param sub: The subreddit specification
+    :param top_url: The URL prefix to use for requests
     :param text_maxlen: The maximum length of a comment text
     :return: All dialogs of the submission
     """
     # Abort if the JSON structure is invalid
-    if len(js) < 2 and js[0]["kind"] != "Listing" and js[0]["kind"] != "Listing":
+    if (
+        isinstance(js, list)
+        and len(js) < 2
+        or js[0]["kind"] != "Listing"
+        or js[1]["kind"] != "Listing"
+    ):
         return []
-    submission = js[0]["data"]["children"][0]
-    ama_mode = is_ama_submission(submission["data"], sub)
+    submission = js[0]["data"]["children"][0]["data"]
+    # Unfortunately, the text validation of the submission has to be done again here.
+    # The same call is done in is_proper_submission, but since the Pushshift API does not
+    # return the selftext_html field, it has to be revalidated here.
+    if not has_proper_text(submission.get("selftext"), submission.get("selftext_html")):
+        return []
+    ama_mode = is_ama_submission(submission, sub)
     # use flair as (arguably rough) approximation for the initial intent
-    intent = submission["data"].get("link_flair_text")
+    intent = submission.get("link_flair_text")
     dialog = {
         "domain": sub["displayName"],
         "initialIntent": intent,
-        "title": submission["data"]["title"],
-        "id": submission["data"]["id"],
+        "title": submission["title"],
+        "id": submission["id"],
     }
     dialogs = []
     # In AMA-mode, the original poster represents the system, while the top-level commenter represents the user.
     # The inverse is true for question-mode.
     if ama_mode:
-        sys = submission["data"]["author"]
+        sys = submission["author"]
         user = None
         dialog["turns"] = []
     else:
         sys = None
-        user = submission["data"]["author"]
+        user = submission["author"]
         # Use either the post body or title as initial turn text in question mode
-        text = submission["data"].get("selftext")
+        text = submission.get("selftext")
         if not text:
-            text = submission["data"].get("title")
+            text = submission.get("title")
         dialog["turns"] = [{"sender": "user", "text": text}]
     comments = [c for c in js[1]["data"]["children"] if is_proper_comment(c)]
     for comment in comments:
         turns = traverse_dialog(
-            comment, [], submission["data"]["url"], sys, user, text_maxlen
+            comment, [], top_url + submission["permalink"], sys, user, text_maxlen
         )
         if len(turns) < 2:
             continue
@@ -273,7 +297,7 @@ def write_output(queue: Queue, top_dir: str, cache_dir: Optional[str] = None):
         sub, last_timestamp, dialogs = item
         with open(f"{top_dir}/{sub}.json", "a") as file:
             for dialog in dialogs:
-                dump(dialog, file)
+                dump(dialog, file, ensure_ascii=False)
                 file.write("\n")
         if cache_dir:
             with open(join(cache_dir, sub + ".txt"), "w") as file:
@@ -288,7 +312,17 @@ def process_subreddit(
     blacklist_flairs=[],
     last_timestamp: Optional[int] = None,
 ):
-    submissions = []
+    """
+    Retrieves all relevant submissions from a subreddit and collects dialogues
+    :param sub: The subreddit specification
+    :param url_template: The URL template to use for subreddit requests
+    :param queue: The queue to output dialogues to
+    :param text_maxlen: The maximum length of a comment text
+    :param blacklist_flairs: Submissions with these flairs will be ignored
+    :param last_timestamp: The timestamp from which to resume retrieval
+    :return: The collected dialogues will be output into the queue as (subreddit_name, timestamp, dialogues) triple
+    """
+    submission_url_template = "https://np.reddit.com"
     while True:
         request_url = (
             url_template + f"&after={last_timestamp}"
@@ -297,30 +331,27 @@ def process_subreddit(
         )
         response = get(request_url)
         if response.ok:
-            data = response.json()["data"]
-            if len(data) == 0:
+            data = response.json().get("data")
+            if data is None or len(data) == 0:
                 break
             new_submissions = filter_submissions(data, sub, blacklist_flairs)
-            submissions.extend(new_submissions)
             last_timestamp = response.json()["data"][-1]["created_utc"]
+            for submission in new_submissions:
+                response = get(
+                    submission_url_template + submission[0] + ".json?limit=1000"
+                )
+                if not response.ok:
+                    continue
+                new_dialogs = retrieve_dialogs(
+                    response.json(), sub, submission_url_template, text_maxlen
+                )
+                queue.put((sub["displayName"], submission[1], new_dialogs))
 
-    url_template = "https://np.reddit.com"
-    for submission in submissions:
-        response = get(url_template + submission[0] + ".json?limit=1000")
-        if not response.ok:
-            continue
-        new_dialogs = retrieve_dialogs(response.json(), sub, text_maxlen)
-        queue.put((sub["displayName"], submission[1], new_dialogs))
 
-
-def main():
-    url = "https://api.pushshift.io/reddit"
-    output_dir = "../data"
+def main(output_dir, blacklist_flairs, text_maxlength, url):
     makedirs(output_dir, exist_ok=True)
     cache_dir = join(output_dir, "cache")
     makedirs(output_dir + "/cache", exist_ok=True)
-    blacklist_flairs = ["Meme", "Humor"]
-    text_maxlength = 1024
     file_name = "subreddits-de.json"
     with open(file_name, "r") as file:
         subs = load(file)
@@ -339,6 +370,7 @@ def main():
         "permalink",
         "score",
         "selftext",
+        "selftext_html",
     ]
     for sub in subs:
         cache_name = f"{cache_dir}/{sub['displayName']}.txt"
@@ -369,4 +401,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = ArgumentParser()
+    parser.add_argument("-o", "--output", default="../data/reddit")
+    parser.add_argument("-b", "--blacklist-flairs", default=["Meme", "Humor"])
+    parser.add_argument("-l", "--text-maxlength", default=1024)
+    parser.add_argument("-u", "--url", default="https://api.pushshift.io/reddit")
+    args = parser.parse_args()
+    main(args.output, args.blacklist_flairs, args.text_maxlength, args.url)

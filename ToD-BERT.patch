@@ -1,0 +1,12 @@
+diff --git a/my_tod_pretraining.py b/my_tod_pretraining.py
+index 55637ef..1bd5de5 100644
+--- a/my_tod_pretraining.py
++++ b/my_tod_pretraining.py
+@@ -30,6 +30,7 @@ from utils.utils_msre2e import *
+ from utils.utils_taskmaster import *
+ from utils.utils_metalwoz import *
+ from utils.utils_schema import *
++from reddit.utils_reddit import prepare_data_reddit
+ 
+ from transformers import (
+     WEIGHTS_NAME,

@@ -1,6 +1,6 @@
 import unittest
 
-from reddit.scrape_reddit import is_ama_submission, is_proper_comment
+from reddit.scrape_reddit import is_ama_submission, is_proper_comment, has_proper_text
 
 
 class TestScrapeReddit(unittest.TestCase):
@@ -33,6 +33,13 @@ class TestScrapeReddit(unittest.TestCase):
         self.assertFalse(is_proper_comment(comment))
         comment["data"]["replies"] = {"data": {"children": [{"data": None}]}}
         self.assertTrue(is_proper_comment(comment))
+
+    def test_has_proper_text(self):
+        post = {"text": "This is a [link](http://example.com)", "text_html": 'This is a &lt;a href=\"http://example.com\"&gt;link&lt;a&gt;'}
+        self.assertFalse(has_proper_text(post["text"], post["text_html"]))
+        self.assertFalse(has_proper_text(""))
+        self.assertFalse(has_proper_text("[deleted]"))
+        self.assertFalse(has_proper_text("RAAAAAGE"))
 
 
 if __name__ == "__main__":

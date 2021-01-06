@@ -1,3 +1,13 @@
-requests
-requests-retry-on-exceptions
-fake-useragent
+requests==2.25.1
+requests-retry-on-exceptions==2020.10.30
+fake-useragent==0.1.11
+torch==1.7.0
+six==1.15.0
+numpy==1.18.1
+tqdm==4.31.1
+transformers==3.0.2
+nltk==3.5
+ptvsd==4.3.2
+scikit_learn==0.23.2
+simplejson==3.17.2
+tensorboardX==2.1

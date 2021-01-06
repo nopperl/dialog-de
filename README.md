@@ -22,7 +22,7 @@ This first chatbot step of __intent detection__ will serve as demo of this proje
 learns dialogue-specific text representations using a dialogue dataset. These representations can then be used for an
 intent detection classifier. This classifier can then be evaluated with the F1-score metric similar to [0].
 
-# Models
+## Models
 The ConveRT model [1] was proposed last year and holds the first place in the comparison of [0]. The model is pretrained
 on English Reddit comments using a response selection task. However, the authors did not provide a reference
 implementation and too little information to recreate it. Additionally, they found that ConveRT representations
@@ -32,19 +32,27 @@ Another approach is then to start with a pretrained language model (like BERT), 
 use the resulting model for dialogue representations. This has been successfully attempted with the TOD-BERT model [3].
 This model architecture will be used in this project. distil-bert-german [4] will be used as pretrained language model.
 
-# Dataset
+## Dataset
 A Reddit conversation dataset consisting of German language only will be assembled. However, the dataset will be
 structured in a way so that other sources could potentially be added (such as forums, QA sites, chats). The goal will
 be to provide a dataset of similar quality and structure to the MetaLWOz dataset [5] used to train TOD-BERT. This
 requires heavy manual heuristics in the data collection.
 
-# Work breakdown
+## Work breakdown
 * Dataset creation: 20
 * training the network: 10
 * building an application (small chatbot): 10
 * writing the final report: 3
 * preparing the presentation of your work: 1
 
+## Usage
+```
+pip install -r requirements
+pip install -e .
+cd ToD-BERT; git apply ../ToD-BERT.patch; cd .. 
+./get_data.sh
+./train_model.sh
+```
 
 [0]: https://arxiv.org/abs/2010.13912
 [1]: https://arxiv.org/abs/1911.03688
