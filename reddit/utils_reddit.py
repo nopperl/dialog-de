@@ -86,7 +86,7 @@ def prepare_data_reddit(args):
         for f in listdir(join(args["data_path"], "reddit"))
         if f.endswith(".json")
     ]
-    pairs = read_pairs(args, file_paths, max_line=max_line, ds_name=ds_name)
+    pairs = read_pairs(args, file_paths, max_line=max_line, max_words=10480, ds_name=ds_name)
     random_idx = np.random.permutation(range(0, len(pairs)))
     train_idx = int(len(random_idx) * 0.8)
     dev_idx = int(len(random_idx) * 0.1)
