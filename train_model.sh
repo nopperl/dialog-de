@@ -5,7 +5,8 @@ CUDA_VISIBLE_DEVICES=0 python my_tod_pretraining.py \
     --task=usdl \
     --model_type=distilbert \
     --model_name_or_path=distilbert-base-german-cased \
-    --output_dir=../save/pretrain/ToD-BERT-JNT \
+    --output_dir=../save/pretrain/ToD-BERT-German-JNT \
+    --overwrite_output_dir \
     --do_train \
     --do_eval \
     --mlm \
