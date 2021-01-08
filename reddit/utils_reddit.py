@@ -30,16 +30,28 @@ def get_turn_input_example():
     }
 
 
-def read_pairs(args, dial_files, max_line=None, min_words=1, max_words=128, ds_name=""):
+def read_pairs(args, dial_files, max_line=None, min_words=1, max_words=128, ds_name="", splits=(.8, .1, .1)):
     print(("Reading from {} for read_langs_turn".format(ds_name)))
     assert min_words >= 0
     assert min_words < max_words
+    assert len(splits) == 3
+    assert sum(splits) == 1.0
 
-    data = []
+    data_train = []
+    data_dev = []
+    data_test = []
 
     for dial_file in dial_files:
 
         with open(dial_file, "r") as file:
+            num_lines = sum(1 for _ in file)
+            file.seek(0)
+            random_idx = np.random.permutation(range(0, num_lines))
+            train_range = int(len(random_idx) * splits[0])
+            dev_range = int(len(random_idx) * splits[1])
+            train_idx = random_idx[:train_range]
+            dev_idx = random_idx[train_range + 1:train_range + dev_range + 1]
+            test_idx = random_idx[train_range + dev_range + 2:]
             for line_number, line in enumerate(file):
                 dialog_history = []
                 dialog = json.loads(line)
@@ -61,19 +73,20 @@ def read_pairs(args, dial_files, max_line=None, min_words=1, max_words=128, ds_n
                         data_detail["turn_sys"] = turn_sys
                         data_detail["dialog_history"] = list(dialog_history)
 
-                        if not args["only_last_turn"]:
-                            data.append(data_detail)
+                        if line_number in train_idx:
+                            data_train.append(data_detail)
+                        elif line_number in dev_idx:
+                            data_dev.append(data_detail)
+                        elif line_number in test_idx:
+                            data_test.append(data_detail)
 
                         dialog_history.append(turn_sys)
                         dialog_history.append(turn_user)
 
-                if args["only_last_turn"]:
-                    data.append(data_detail)
-
                 if max_line and line_number >= max_line:
                     break
 
-    return data
+    return data_train, data_dev, data_test
 
 
 def prepare_data_reddit(args):
@@ -86,14 +99,7 @@ def prepare_data_reddit(args):
         for f in listdir(join(args["data_path"], "reddit"))
         if f.endswith(".json")
     ]
-    pairs = read_pairs(args, file_paths, max_line=max_line, max_words=10480, ds_name=ds_name)
-    random_idx = np.random.permutation(range(0, len(pairs)))
-    train_idx = int(len(random_idx) * 0.8)
-    dev_idx = int(len(random_idx) * 0.1)
-    pairs_train = [p for i, p in enumerate(pairs) if i < train_idx]
-    pairs_dev = [p for i, p in enumerate(pairs) if train_idx <= i < train_idx + dev_idx]
-    pairs_test = [p for i, p in enumerate(pairs) if i >= train_idx + dev_idx]
-    # TODO: dev and test set (probably not really needed)
+    pairs_train, pairs_dev, pairs_test = read_pairs(args, file_paths, max_line=max_line, max_words=10480, ds_name=ds_name)
 
     print("Read {} pairs train from {}".format(len(pairs_train), ds_name))
     print("Read {} pairs valid from {}".format(len(pairs_dev), ds_name))
