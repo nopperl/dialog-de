@@ -20,7 +20,7 @@ shift
 done
 
 cd ToD-BERT
-CUDA_VISIBLE_DEVICES=-1 python my_tod_pretraining.py \
+CUDA_VISIBLE_DEVICES=0 python my_tod_pretraining.py \
     --task=usdl \
     --model_type=distilbert \
     --model_name_or_path=distilbert-base-german-cased \
