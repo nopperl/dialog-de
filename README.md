@@ -26,7 +26,7 @@ intent detection classifier. This classifier can then be evaluated with the F1-s
 The ConveRT model [1] was proposed last year and holds the first place in the comparison of [0]. The model is pretrained
 on English Reddit comments using a response selection task. However, the authors did not provide a reference
 implementation and too little information to recreate it. Additionally, they found that ConveRT representations
-miss certain language information and have to be complemented with a general purpose language representation [2]  
+miss certain language information and have to be complemented with a general purpose language representation [2].
 
 Another approach is then to start with a pretrained language model (like BERT), train it on dialogue data and
 use the resulting model for dialogue representations. This has been successfully attempted with the TOD-BERT model [3].
@@ -46,12 +46,22 @@ requires heavy manual heuristics in the data collection.
 * preparing the presentation of your work: 1
 
 ## Usage
+Clone the repo using the `--recursive` flag or issue `git submodule update`. Then:
+
 ```
-pip install -r requirements
+pip install -r requirements.txt
 pip install -e .
 cd ToD-BERT; git apply ../ToD-BERT.patch; cd .. 
 ./get_data.sh
 ./train_model.sh
+```
+
+Alternatively, the provided `Dockerfile` can be used to skip the first two steps. For this, both [Docker](https://docs.docker.com/get-docker/) and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) have to be installed. The image built with the below command will include [apex](https://github.com/NVIDIA/apex) for automatic mixed precision and [faiss](https://github.com/facebookresearch/faiss) for negative sampling based on k-means.
+
+```
+nvidia-docker build -t dialog-de .
+nvidia-docker run -v `pwd`:/workspace:rw -it dialog-de bash
+./train_model --amp --kmeans
 ```
 
 [0]: https://arxiv.org/abs/2010.13912
