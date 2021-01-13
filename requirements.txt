@@ -11,6 +11,6 @@ ptvsd==4.3.2
 scikit_learn==0.23.2
 simplejson==3.17.2
 tensorboardX==2.1
-rasa==2.2
+git+https://github.com/nikuya3/rasa.git@df6734e
 spacy==2.2.4
 tensorflow==2.4.0

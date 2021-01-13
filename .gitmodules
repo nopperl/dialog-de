@@ -1,6 +1,4 @@
 [submodule "ToD-BERT"]
 	path = ToD-BERT
 	url = https://github.com/jasonwu0731/ToD-BERT
-[submodule "rasa"]
-	path = rasa
-	url = https://github.com/RasaHQ/rasa/
+	branch = 85e910a0260c9d0f07512d1654d36eef2de624d9
