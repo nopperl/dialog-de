@@ -1,0 +1,3077 @@
+version: "2.0"
+nlu:
+- intent: Einsamkeit
+  examples: |
+    - Ich fühle mich eingesperrt und hilflos
+    - Ich bin solo und völlig allein in meiner Wohnung.
+    - Ohne Familienangehörige
+    - Gibt es einen Callcenter für Alleinstehende?
+    - Wen darf ich gegen die Einsamkeit kontaktieren?
+    - Wo finde ich ein nettes Gespräch?
+    - Ich suche eine nette Unterhaltung weil ich alleine bin
+    - Ich brauche jemanden zum quatschen.
+    - Ich kann keine Person mehr treffen
+    - Niemand interessiert sich mehr für mich
+    - Ich fühle mich total isoliert und abgeschottet
+    - Telefonangebot
+    - Redeangebot
+    - Gesprächsangebot
+    - Woher bekomme ich jetzt freundliche Gespräche?
+    - mir fehlt der soziale Kontakt total
+    - Ich habe keinen sozialen Kontakt mehr
+    - Wer spricht mit mir, wenn ich einsam bin?
+    - Ich wohne alleine und kann mit niemandem sprechen.
+    - Ich bin single und habe niemanden zum reden
+    - Gibt es eine Hotline gegen das Alleinesein?
+    - Gibt es Telefonnummern gegen die Einsamkeit?
+    - Was tun, wenn man die Einsamkeit nicht mehr aushält?
+    - Was mache ich, wenn ich mich alleine fühle?
+    - Ich fühle mich niedergeschlagen und depressiv, weil ich alleine bin.
+    - Jetzt muss ich dauernd alleine sein. Das ist traurig.
+    - Wer hilft mir mit der Einsamkeit?
+    - Wohin kann ich mich wenden, wenn ich mich einsam fühle?
+    - Einsamkeit und Alleinsein
+    - Ich fühle mich aufgrund der Ausgangsbeschränkung alleine.
+    - Aber ich bin ja einsam
+    - Wie können Sich einsame Menschen weiterhelfen?
+- intent: Dienstreisen
+  examples: |
+    - ich muss beruflich nach [schweden](geo-state) fliegen.
+    - muss ich dienstreisen wegen corona virus absagen?
+    - für ein projekt bei der arbeit muss ich verreisen, darf ich das?
+    - wie ist die aktuelle rechtslage zu dienstreisen?
+    - mein arbeitgeber will dass ich noch dienstlich verreise, was soll ich tun
+    - ich will nicht dienstlich verreisen, was soll ich machen
+    - Ich will keine geschäftsreise machen
+    - darf ich eine geschäftsreise verweigern?
+    - darf ich mich einer dienstreise verweigern?
+    - eine dienstreise in die USA steht kann, kann ich davon abtreten?
+    - was soll ich machen wenn ich beruflich bedingt verreichen muss?
+    - ich muss geschäftliche verreisen, darf ich das noch?
+    - was ist der aktuelle stand zu dienstreisen
+    - eine dienstreise steht an, muss ich sie absagen?
+    - Es werden immer noch Dienstreisen angeordnet - geht das?
+    - Bin ich verpflichtet Dienstreisen durchzuführen?
+    - Gibt es einige generelle Regelungen für Dienstreisen?
+    - Kann mich meine Firma zu Dienstreisen zwingen?
+    - Unter welchen Gründen kann ich eine Dienstreise verweigern?
+    - Darf ich Dienstreisen verweigern?
+    - Welche Rechte habe ich mich gegen Dienstreisen zu wehren?
+    - Mus sich Dienstreisen antreten?
+    - Darf mich mein Chef auf Dienstreise schicken?
+    - kann ich dienstreisen machen?
+    - Dienstreisen
+- intent: Schwangerschaft
+  examples: |
+    - Was macht Corona mit meiner Schwangerschaft?
+    - Habe ich als Schwanger ein erhöhtes Risiko zu erkranken?
+    - Gehöre ich als Schwangere zur Risikogruppe?
+    - Ist man Risikopatient, wenn man schwanger ist?
+    - Sind Schwangere empfänglicher für den Virus?
+    - Sind Schwangere anfälliger für Corona?
+    - Wie kann Corona eine Schwangerschaft beeinflussen?
+    - Muss ich mir Sorgen um meine Schwangerschaft machen?
+    - Welche Auswirkungen hat der Virus speziell auf Schwangere?
+    - Ich bin schwanger und habe Corona. Was heißt das für mich?
+    - Bin ich als Schwangere besonders gefährdet?
+- intent: Ernährung
+  examples: |
+    - Welche Lebensmittel sollte ich jetzt vermehrt zu mir nehmen?
+    - Gibt es gesunde Lebensmittel, die Corona vorbeugen können?
+    - Welche Speisen darf ich jetzt nicht mehr essen?
+    - Soll ich einen passenden Speiseplan entwickeln?
+    - Muss ich mich jetzt gesünder ernähren?
+    - Sind alle Nahrungsmittel erlaubt?
+    - Wie soll ich meine Ernährung an die jetztige Situation an passen?
+    - Gibt es Hinweise zur passenden Ernährung während der Epidemie?
+    - Muss ich jetzt bestimmte Sachen essen gegen Corona.
+    - Gibt es heilende Nahrungsmittel, die ich zu mir nehmen kann?
+    - Kann ich mich durch meine Ernährungsweise schützen?
+    - Muss ich mein Essen anpassen?
+    - Muss ich meine Ernährung anpassen?
+    - Darf ich noch alles essen?
+    - Kann man noch italienisches Obst essen?
+- intent: umzug
+  examples: |
+    - was muss ich beim umzug beachten?
+    - Mein Mietvertrag endet während der Ausgangsbeschränkung
+    - ich muss aus meiner wohnung ausziehen
+    - ich habe einen umzug geplant
+    - darf ich umziehen?
+    - Kann ich umziehen?
+    - Umzug
+- intent: Risikogebiete
+  examples: |
+    - welche länder sind corona risiko gebiete?
+    - ist [bayern](geo-state) ein risiko gebiet?
+    - Welches sind besonders betroffene Gebiete in [Deutschland](geo-state)?
+    - Wie werden Risikogebiete festgelegt?
+    - Welche Länder werden aktuell als Risikoländer bewertet?
+    - Welche Nation gilt international als Risikogebiet?
+    - Wo finde ich eine Liste von Risikogebieten?
+    - Was sind Risikogebiete?
+    - Wo kann ich Informationen über Risikogebiete einsehen?
+    - Gibt es auch Risikogebiete in [Deutschland](geo-state)?
+    - Zählt [Italien](geo-state) zu den Risikogebieten?
+    - War ich in einem Corona Risikogebiet?
+    - Welchen Land gilt als Risikogebiet?
+    - Woher weiß ich welche Länder als Risikogebiet gelten?
+    - Ist [Österreich](geo-state) ein Risikogebiet?
+    - Ist [Italien](geo-state) Risikogebiet?
+    - Informationen zu Risikogebieten
+    - Ich möchte wissen was alles Risikogebiet ist
+    - Welche Länder sind Risikogebiet?
+    - Welche Regionen sind als Risiko eingestuft?
+    - Risikogebiet
+    - Welche Länder gelten als Risikogebiet
+    - Was sind Risikogebiete
+    - www.rki.de/covid-19-risikogebiete
+- intent: Parallele Förderung Bund+Bayern
+  examples: |
+    - Wie viele Förderprogramme darf ich miteinander verbinden?
+    - Sind unterschiedliche Förderprogramme gleichzeitig zu nutzen?
+    - Ist Parallelförderung ausgeschlossen?
+    - Ist Doppelförderung verboten?
+    - Wie sieht es aus mit paralleler Förderung
+    - Welche Förderungen kann ich gleichzeitig in Anspruch nehmen?
+    - Wie viele Förderanträge darf ich für mein Unternehmen stellen?
+    - Ist es zulässig zwei Förderanträge zu stellen?
+    - Ist es erlaubt zwei Förderungen anzunehmen?
+    - Gleichzeitige finanzielle Unterstützung aus verschiedenen Ministerien
+    - Parallele Förderung
+    - Wird man von der Soforthile ausgeschlossen, wenn man auch Unterstützung vom Bund bekommt?
+    - Kann man bayerische Soforthilfe zusammen mit der Bundeshilfe beantragen?
+    - Welche Fördertöpfe darf ich parallel nutzen?
+    - Darf ich mich auf beide Förderungen bewerben?
+    - Darf ich bayerische Soforthilfe und Bundeshilfe in Anspruch nehmen?
+    - Zwei Fördermöglichkeiten anzapfen
+    - Geld aus verschiedenen Fördertöpfen beziehen
+    - Geld von Bayern und Deutschland gleichzeitig
+    - Kann man Hilfe von Bund und Land gleichzeitig beantragen?
+    - Parallelförderung
+- intent: sicherheit
+  examples: |
+    - Kann ich irgendwie die Ausgangssperre umgehen?
+    - Wie oft wird das Ausgangsverbot kontrolliert?
+    - Wird die Ausgangssperre kontrolliert?
+    - Findet gerade eine Razzia statt?
+    - Warum ist plötzlich überall die Polizei?
+    - Was macht die Polizei in meiner Gegend?
+    - Läuft die Polizei draußen rum?
+    - Was passiert wenn mich die Polizei aufhält?
+    - Kann ich der Polizei begegnen?
+    - Wird kontrolliert, ob man vor die Tür geht?
+    - was passiert, wenn ich raus gehe?
+    - ist es gefährlich, raus zu gehen?
+    - wer überwacht die ausgangsbeschränkung
+    - jugendliche treffen sich auf der strasse
+    - muss man auf der strasse angst haben?
+    - sind wir in der Öffentlichkeit noch sicher?
+    - wer kümmert sich um unsere Sicherheit?
+    - was macht die bundeswehr
+    - was macht die polizei
+    - wer sorgt für sicherheit
+    - Sicherheit
+- intent: Start-Up
+  examples: |
+    - Wie kann ich Geld für meine Projektidee generieren?
+    - Wie kann ich das Kapital meines Start Ups absichern?
+    - Ich benötige Informationen zum Crowdfunding
+    - Gibt es einen Hilfsfond für Start-Ups?
+    - Krisenhilfe für Kreative, Künstler und Musiker?
+    - Welche alternativen Unterstützungsplattformen gibt es?
+    - Ich bin Künstler und benötige finanzielle Mittel.
+    - Ich arbeite in der kreativen Szene und suche nach Hilfsangeboten.
+    - Kampagnen und Crowdfunding-Initiativen?
+    - Lösungen zum Crowdfunding?
+    - Mein Projekt braucht Unterstützung.
+    - Ich bin Gründer und suche nach Wegen aus der Krise.
+    - Welche Möglichkeiten haben Startups?
+    - Wie kann ich mein Start-Up aus der Krise bringen?
+- intent: Haustier
+  examples: |
+    - Ist das Virus gefährlich für Hunde und Katzen?
+    - Ist das Virus an Katzen übertragbar?
+    - Wie stelle ich fest ob meine Katze das Virus hat?
+    - Woher weiß ich, ob mein Haustier Corona hat?
+    - Wie bemerke ich die Infektion bei meinem Haustier?
+    - Werden Haustiere auch davon krank?
+    - Kann ich mir die Krankheit von Tieren holen?
+    - Kann ich mich bei Tieren anstecken?
+    - Werden Schafe auch durch das Virus angegriffen?
+    - Muss ich meine Kühe vor dem Virus schützen?
+    - Könnte in meinem Stall das Coronavirus ausgebrochen sein?
+    - Viehbetrieb
+    - Viehzucht
+    - Stalltiere
+    - Werden Hasen durch das Virus infiziert?
+    - Kater
+    - Labrador
+    - Dackel
+    - Kann mein Kätzchen Corona haben?
+    - Kann mein Pferd Corona haben?
+    - Löst der Virus bei Haustieren eine Infektion aus?
+    - Geht von Tieren eine Ansteckungsgefahr aus?
+    - Werden Menschen von Tieren angesteckt?
+    - Findet eine Krankheitsübertragung vom Tier auf den Menschen statt?
+    - Ist es möglich, dass mein Haustier mir das Virus mitgibt?
+    - Könnte ich das Virus von meinem Hund übertragen bekommen?
+    - Muss ich meinen Hund vor Corona schützen?
+    - Ist meine Katze mit dem Virus infiziert?
+    - Kann meine Katze an Corona sterben?
+    - Können Haustiere erkranken?
+    - Übertragung vom Tier auf den Menschen
+    - Hat sich meine Katze möglicherweise angesteckt?
+- intent: Veranstaltungsverbot
+  examples: |
+    - Sind die Veranstaltungen in der [Sporthalle](Freizeiteinrichtungen) abgesagt?
+    - Ist die Veranstaltung in der [Sporthalle](Freizeiteinrichtungen) abgesagt?
+    - Wie weit sind Veranstaltungen betroffen?
+    - In wie weit sind Veranstaltungen abgesagt?
+    - In wie weit sind Veranstaltung von der Krise betroffen?
+    - Was für Einschränkungen gibt es bei Veranstaltungen
+    - Fällt jede Veranstaltung aus?
+    - fallen die Veranstaltungen jetzt alle flach?
+    - Was ist mit einem Flohmarkt?
+    - Was ist mit einer Oper?
+    - Wie sieht es mit Konzerten aus?
+    - Wie sieht es mit Festivals aus?
+    - Ich wollte eine Veranstaltung besuchen ?
+    - Wie sieht es mit Veranstaltungen aus
+    - Gibt es ein Verbot für Veranstaltungen?
+    - Veranstaltungsverbot
+    - Darf ich feiern gehen?
+    - fällt kiliani aus?
+    - Wann können wir wieder Veranstaltungen durchführen?
+- intent: Freizeiteinrichtungen
+  examples: |
+    - Finden Fortbildungen statt?
+    - Können wir ins Vereinsheim um zu tagen?
+    - Darf unser Verein eine Gremiensitzung abhalten?
+    - Darf ich feiern gehen?
+    - dürfen [diskotheken](Freizeiteinrichtungen) noch geöffnet haben?
+    - haben [kinos](Freizeiteinrichtungen) noch offen?
+    - Wo kann ich jetzt nicht mehr hingehen?
+    - Welche Geschäfte der Freizeitgestaltung haben nicht mehr offen?
+    - Welche Freizeitaktivitäten sind in Würzburg untersagt?
+    - Wo darf ich noch Sport treiben?
+    - Welche Freizeitaktivitäten kann ich nicht mehr durchführen?
+    - Welche Einrichtungen gehören nicht zum täglichen Bedarf?
+    - Kann ich mein [Fitnessstudio](Freizeiteinrichtungen) besuchen?
+    - Gibt es noch eine [Kneipe](Freizeiteinrichtungen), die offen hat?
+    - Geht noch irgendwas im Würzburger Nachtleben?
+    - Haben noch irgendwelche [Clubs](Freizeiteinrichtungen), Bars und Discos offen?
+    - Hat die [Bibliothek](Freizeiteinrichtungen) geöffnet?
+    - Darf ich das [Schwimmbad](Freizeiteinrichtungen) besuchen?
+    - Welche Freizeiteinrichtungen haben noch offen?
+    - Freizeiteinrichtungen
+    - sind denn schwimmbäder noch offen?
+    - hat das nautiland offen?
+    - Darf ich die Sauna besuchen?
+    - Ab wann kann ich wieder ins Schwimmbad?
+    - Freizeit
+- intent: Telefonnummern
+  examples: |
+    - Ich muss jemanden anrufen
+    - Notfalltelefon
+    - Hotline?
+    - Telefonnummern?
+    - Wo muss ich anrufen?
+    - Gibt es ein Telefon?
+    - telefon
+    - Wer hilft mir, wenn ich in Quarantäne muss?
+    - Ich habe gerade erfahren, dass eine Person aus Erfurt mit der ich vor einer Woche Kontakt hatte, an corona infiziert ist. Welche Telefonnummer muss ich anrufen um baldmöglichst einen Termin für einen Test zu bekommen?
+- intent: Kleinunternehmen
+  examples: |
+    - Mein Kleinunternehmen ist in seiner Existenz bedroht.
+    - Mein Kleinstbetrieb ist in der Krise. Wo kann ich Hilfe erwirken?
+    - Ich führe ein Kleinstunternehmen und brauche Beratung.
+    - Unternehmen mit kleiner Mitarbeiteranzahl
+    - Ich habe nur wenige Beschäftigte. Welche Finanzhilfe passt da?
+    - Was sollen Firmen mit wenigen Angestellten beantragen?
+    - Auf welche Liquiditätshilfen kann ich als Freelancer zurückgreifen?
+    - Welche Untesrstützung habe ich als Freiberufler zu erwarten?
+    - Welche monetären Hilfsmaßnahmen bietet der Bund?
+    - Welchen Zuschuss bekomme ich vom Bund als Selbstständiger?
+    - Wie wird Solo-Selbständigen unter die Arme gegriffen?
+    - Kabinettsbeschluss vom 23.03.2020
+    - Was bietet das neueste Maßnahmenpaket des BMWI?
+    - Welche Soforthilfen bietet das Bundeswirtschaftsministerium für kleine Firmen?
+    - Finanzielle Hilfen für Solo-Selbstständige und Gründer?
+    - Wie können sich kleine Unternehmen über Wasser halten?
+    - Welche Unterstützung gibt es für Kleinunternehmen?
+    - Finanzhilfe als Selbständiger
+    - Ich bin Kleinunternehmer und in finanziellen Schwierigkeiten. An wen kann ich mich wenden?
+    - Ich bin selbstständig als Gästeführer, ohne weitere Mitarbeiter, kann ich Unterstützung bekommen?
+    - Wo finden kleine Firmen finanzielle Hilfe?
+    - selbstständigkeit
+- intent: Hartz IV
+  examples: |
+    - Wie kann ich mein Einkommen durch staatliche Mittel erhöhen?
+    - Ein Einkommen reicht mir nicht mehr zum leben.
+    - Wo finde ich mehr Informationen zum Arbeitslosengeld II ?
+    - Welche Form von Arbeitslosengeld kann ich als Selbstständige nutzen?
+    - Steht mir Arbeitslosengeld zu?
+    - Wie sieht es mit Arbeitslosengeld aus?
+    - Kann ich als Freischaffende Arbeitslosengeld2 beziehen?
+    - Ich bin freischaffend tätig und möchte Hartz IV beantragen.
+    - Bekomme ich als Freiberufler Grundsicherung?
+    - Darf ich Grundsicherung beantragen?
+    - Dürfen Selbständige Hartz 4 beziehen?
+    - Ist Hartz IV auch für Selbstständige zu haben?
+    - Mein Gehalt reicht nicht mehr zum Leben aus.
+    - Wo kann ich meinen Lohn aufstocken?
+    - Darf ich mein Gehalt aufstocken?
+    - Bekomme ich Grundsicherung?
+    - Arbeitslosengeld II für Aufstocker
+- intent: Therapie
+  examples: |
+    - Heilkunde
+    - Sprachheilschule
+    - Physiopraxis
+    - Heilpraktiker
+    - Sind Termine in der therapeutischen Praxis vereinbar?
+    - Mir geht es ohne meine Therapie nicht gut
+    - Ich brauche meine Psychologin
+    - Ich würde gern wieder zu meinem Psychologen gehen.
+    - Darf ich meinen Psychater sehen?
+    - Massage
+    - Darf ich wieder einen Termin beim Physiotherapeuten machen?
+    - Ist der Besuch beim Physio erlaubt?
+    - kann ich noch zur ergotherapie
+    - kann ich noch zur Psychotherapie
+    - Darf ich zur Therapie?
+    - Darf ich zur Psychotherapie?
+    - Darf ich zur Ergotherapie
+    - Darf ich zur Logopädie?
+    - Darf ich zur Physiotherapie?
+    - psychotherapie
+    - Ergotherapie
+    - Ich würde gern wieder den Termin beim Physio wahrnehmen. Geht das?
+    - Ich spreche von meinem Physiotherapeuten
+    - Kann ich noch zur Physiotherapie?
+- intent: Risikogruppe
+  examples: |
+    - risikogruppe
+    - Für wen stellt Corona eine ernsthafte Gefährdung dar?
+    - Welche Personengruppe ist sehr bedroht?
+    - Für welche Menschen ist Corona eine starke Bedrohung?
+    - Wie gefährlich ist es für Menschen jüngeren Alters?
+    - Ist die Jugend genauso betroffen?
+    - Was macht Corona mit Kleinkindern?
+    - Sind Kleinkinder im Speziellen bedroht?
+    - Wie sieht es mit Kleinkindern aus?
+    - Gibt es auch schwere Krankheitsverläufe bei Kindern?
+    - Wie sollte sich die Risikogruppe verhalten?
+    - Welche Empfehlungen gibt es für die Risikogruppe?
+    - Wie gefährlich ist Corona für Kinder?
+    - Wie gefährlich ist das Virus für Jugendliche und Teenager?
+    - Müssen Jugendliche auch Angst haben?
+    - Sind alte Leute mehr betroffen als Jüngere?
+    - Gibt es ein altersbedingtes Risiko?
+    - Sind junge Menschen gleichermaßen gefährdet?
+    - Welche Leute sterben unter Umständen an dem Virus?
+    - Warum sterben Leute an Corona?
+    - Wer kann an Corona sterben?
+    - Muss ich Angst haben zu sterben?
+    - Wie kommt es zu Todesfällen?
+    - Lungenversagen
+    - Welche Kriterien werden bei der Risikogruppe berücksichtigt?
+    - Ich habe Bluthochdruck. Ist das besonders gefährlich?
+    - Macht mich Bluthochdruck besonders anfällig?
+    - Zähle ich als Raucher zur Risikogruppe?
+    - Bin ich als Raucher einer besonderen Gefahr ausgesetzt?
+    - Bin ich stark gefährdet weil ich rauche?
+    - Welche Leute sind einem besonderen Risko ausgesetzt?
+    - Welche Leute gehören zur Risikogruppe?
+    - Was muss vorliegen, damit man zur Risikogruppe gehört?
+    - Wer wird als Risikopatient eingestuft?
+    - Wie ist die Risikogruppe definiert?
+    - Wer hat das höchste Risiko?
+    - Welche Menschen müssen sich besonders schützen?
+    - Welche Personen sind besonders gefährdet?
+    - Wer gehört zur Risikogruppe?
+    - Bin ich ein Risikopatient?
+    - Werde ich an Corona sterben?
+    - Welche Personen sind Risikogruppen?
+- intent: Bürgschaft Summe
+  examples: |
+    - Welche Höhe darf meine Bürgschaft umfassen?
+    - Wohin wende ich mich in Bezug auf Bürgschaften?
+    - Für mein Unternehmen will ich eine Bürgschaft erwirken.
+    - Über wie viel Geld darf ich mich verbürgen?
+    - Ich will eine Bürgschaft eingehen - wie geht das?
+    - Wer informiert mich über die Aufnahme von Bürgschaften?
+    - Wo finde ich im Internet Infos über Bürgschaften?
+    - Wie kann ich eine Bürgschaft aufnehmen?
+    - Wer ist bei Bürgschaften zuständig?
+    - Wie viel Millionen Euro darf ich als Bürgschaft aufnehmen?
+    - Bis zu welcher Summe kann ich eine Bürgschaft beantragen?
+    - Wie hoch darf meine Bürgschaft sein?
+    - Welche Hilfe bietet die Bürgschaftsbank?
+    - Wie können mir Bürgschaftsbanken helfen?
+    - Bis zu welchem Betrag kann ich eine Bürgschaft aufnehmen?
+    - Ich will eine Bürgschaft aufnehmen
+- intent: Triftiger Grund
+  examples: |
+    - Reicht eine mündliche Erklärung, dass ich beruflich unterwegs bin?
+    - Muss ich ein Dokument vorzeigen?
+    - Polizeikontrolle
+    - polizeiliche Kontrolle
+    - Muss ich einen Nachweis für den Grund meines Ausgangs erbringen?
+    - Kann mich die Polizei nach Beweisen fragen?
+    - Ist es zwingend notwendig einen Dienstausweis oder Beschäftigtenschein mitzuführen?
+    - Muss ich der Polizei beweisen, warum ich draußen bin?
+    - Muss ich einen Beleg für meine Dienstfahrt dabei haben?
+    - Darf mich die Polizei befragen?
+    - Muss ich der Polizei sagen warum ich draußen war?
+    - Muss ich die Gründe für meinen Spaziergang erläutern?
+    - Muss ich mich vor der Polizei rechtfertigen?
+    - Ich will rausgehen. Wann ist das möglich?
+    - Welche Regelungen sind für Ausgänge getroffen?
+    - Welche Ausnahmen sind für das Kontaktverbot zulässig?
+    - Wer erklärt mir wann ich was machen darf?
+    - Darf ich ausnahmsweise doch rausgehen?
+    - Welche Ausnahmen gibt es für die Ausgangsbeschränkung?
+    - Wo kann ich die Ausnahmen für das Ausgangsverbot nachlesen?
+    - Wann darf ich offiziell das Ausgangsverbot umgehen?
+    - Für welche Situationen gilt die Ausgangsbeschränkung nicht?
+    - Was ist ein gültiger und relevanter Grund um das Haus zu verlassen?
+    - Welche Motive darf ich anführen um nach draußen zu gehen?
+    - Was kann ich sagen wenn mich die Polizei fragt?
+    - Was ist mit triftigen Gründen gemeint?
+    - Wann darf ich die Ausgangsbeschränkung umgehen?
+    - Unter welchen Umständen darf ich spazieren gehen?
+    - Welche Gründe gibt es um draußen rumzulaufen?
+    - Wofür darf ich noch rausgehen?
+    - Wird es geahndet, wenn ich ohne triftigen Grund vor die Tür gehe?
+    - Triftiger Grund
+    - Muss ich immer noch ins Büro gehen?
+    - Darf ich mit Freunden spazieren gehen?
+- intent: ehehaltenhaus
+  examples: |
+    - in würzburg gibt es die meisten toten
+    - warum so viele tote in würzburg?
+    - habt ihr infos zum ehehaltenhaus?
+    - was ist in der sanderau los?
+    - wieviele tote gibt es im ehehaltenhaus?
+    - ehehaltenhaus
+    - Wie viele Tote gab es bereits in Würzburg
+- intent: Arbeitsamt bestehender Termin
+  examples: |
+    - Haben sich die Regeln beim Jobcenter geändert?
+    - Welche Fristen gelten beim Jobcenter immernoch?
+    - Wie steht es um meine Auflagen und Termine bei der Agentur für Arbeit?
+    - Muss ich die Auflagen des Arbeitsamtes erfüllen?
+    - Welche Leistung muss ich für das Arbeitsamt erbringen?
+    - Mein Termin beim Jobcenter ist hinfällig. Welche Folgen hat das?
+    - Welche Konsequenzen gibt es, wenn ich nicht zum Jobcenter gehe wie vereinbart?
+    - Muss ich Sanktionen fürchten, wenn ich nicht zum Arbeitsamt gehe?
+    - Ich kann die Arbeitsagentur gerade nicht aufsuchen.
+    - Welche Folgen hat es, wenn ich den Termin bei der Arbeitsagentur verpasse?
+    - Was geschieht, wenn ich nicht zum Jobcenter gehe?
+    - Was passiert, wenn ich meine Vereinbarung beim Arbeitsamt nicht halte?
+    - Das Jobcenter hat zu und ich kann nicht hingehen.
+    - Ich kann nicht zum Jobcenter gehen - war nun?
+    - Ich kann meinen Termin beim Arbeitsamt nicht wahrnehmen.
+    - Wie kann ich einen Termin beim Jobcenter vereinbaren?
+    - Wie kann ich die Arbeitsagentur erreichen?
+    - Woher weiß ich, ob mein Termin beim Jobcenter noch gilt?
+    - Ist mein Termin beim Jobcenter noch gültig?
+    - Kann ich meinen Termin beim Arbeitsamt noch wahrnehmen?
+- intent: Default Welcome Intent
+  examples: |
+    - moin
+    - hallihallo
+    - huhu
+    - hello
+    - guten morgen
+    - guten abend
+    - guten tag
+    - hi
+    - ja hallo
+    - ich grüße dich
+    - hallöchen
+    - hallo Schatzi
+    - hallo Schatz
+    - hallo hallo
+    - hallo
+    - grüß dich
+- intent: bahnhof
+  examples: |
+    - Bahnhofsmission
+    - Darf man im Bahnhof Zigaretten kaufen?
+    - kann man im Bahnhof Tabak kaufen?
+    - Ist es verboten, in den Bahnhof zu gehen?
+    - Ist der Bahnhof geschlossen?
+    - Darf man Bahn fahren?
+    - wie ist es mit dem BAhnhof?
+    - Kann man in den BAhnhof?
+    - ist der Bahnhof offen?
+    - Ist der Bahnhof noch offen?
+    - Pendler
+    - bahnhof
+- intent: Besuch Krankenhaus
+  examples: |
+    - Sind Besuche im Hospiz grundsätzlich erlaubt?
+    - Welches Hospiz darf ich nach wie vor besuchen?
+    - Werde ich ins Hospiz reingelassen?
+    - Ein Freund ist im Krankenhaus. Darf ich ihn besuchen?
+    - Mein Verwandter liegt auf der Intensivstation. Kann ich hin?
+    - Ich will ein Familienmitglied im Krankenhaus besuchen?
+    - Kann ich jetzt ins Krankenhaus gehen?
+    - Unter welchen Bedingungen darf ich ins Krankenhaus?
+    - Mir geht es schlecht, ich muss ins Krankenhaus. Geht das?
+    - Sind Hospitäler noch zu besuchen?
+    - Unter welchen Umständen ist ein Klinikbesuch erlaubt?
+    - Darf ich ins Uniklinikum Würzburg rein?
+    - Erhalte ich noch Eintritt zum Klinikum?
+    - Wann darf ich das Klinikum betreten?
+    - Welche Klinik darf ich besuchen?
+    - Ich will in eine Klinik
+    - Meine Mutter ist in der Klinik
+    - Was ist mit Krankenhäusern
+    - Ich muss jemanden im Krankenhaus besuchen
+    - Darf ich ins Krankenhaus?
+    - Krankenhaus
+    - Darf ich zum Arzt gehen?
+    - Besuch Krankenhaus
+- intent: Verdienstausfall
+  examples: |
+    - Lohnausfall wegen Arbeitsverbot.
+    - Wer zahlt mir eine Vergütung für entgangenen Lohn?
+    - Wie kann man Entschädigungsgelder beantragen?
+    - Ich bekomme kein Gehalt mehr und brauche finanzielle Hilfe.
+    - Wie kann ich Entschädigungszahlungen für Verdienstausfall einfordern?
+    - Ich leide unter Verdienstausfall.
+    - Welche Möglichkeiten der Entschädigung haben Kantinenmitarbeiter?
+    - Bin in Versorgungseinrichtung angestellt und darf nicht mehr arbeiten.
+    - Als Arbeitnehmer im Gastgewerbe darf ich nicht mehr tätig sein. Welche Optionen habe ich?
+    - Zahlt mir der Staat meinen Lohnausfall zurück?
+    - Welche Entschädigungsmöglichkeiten gibt es?
+    - Wie kann ich meinen Verdienstausfall im Hotelgewerbe kompensieren?
+    - Ich darf meinen Beruf nicht mehr ausüben und will entschädigt werden.
+    - Entschädigung für entgangenen Lohn beantragen?
+    - Verdienstausfallentschädigung beantragen?
+    - Meine Tätigkeit in der Küche wird verboten. Wie kann ich mich wehren?
+    - Wegen der Infektionsgefahr darf ich nicht mehr im Gastgewerbe arbeiten.
+    - Ich bin Koch und darf nicht mehr arbeiten.
+    - Mir wurde ein Tätigkeitsverbot ausgesprochen. Was nun?
+    - wo bekomme ich Verdienstausfall erstattet?
+- intent: spenden
+  examples: |
+    - ich möchte spenden, wo kann ich das tun?
+    - kann ich mit einer spende helfen?
+    - wem kann man geld spenden
+    - Wo kann man spenden?
+    - Wo kann ich Geld spenden?
+    - Wo kann ich spenden
+- intent: Danke
+  examples: |
+    - Cool
+    - Thank you very much
+    - Muchas Gracias
+    - Danke für die Antwort!
+    - Besten Dank!
+    - Thanks
+    - Herzlichen Dank
+    - Danke dir
+    - Dankeschön
+    - Vielen Dank
+    - Danke
+    - ich möchte dir danken
+    - das ist leider eine blöde antwort gewesen
+    - Ich bins Michelle, wollte nur kurz Testen
+- intent: Bürgschaft Anspruch
+  examples: |
+    - Gibt es leichtere Bürgschaftsvoraussetzungen wegen Corona?
+    - Sind Bürgschaften wegen der Corona Krise leichter zu beantragen?
+    - Welche Einrichtungen kann mir in Sachen Bürgschaft weiterhelfen?
+    - An welchen Ansprechpartner muss ich mich für eine Bürgschaft wenden?
+    - Wo finde ich Unterlagen zur Beantragung von Bürgschaften?
+    - Ich muss eine Bürgschaft aufnehmen - wie geht das?
+    - An welches Kreditinstitut muss ich mich für eine Bürgschaft wenden?
+    - Wie kann ich eine Bürgschaft beantragen?
+    - Wo finde ich Informationen zu Bürgerschaften?
+    - Wie können die deutschen Bürgerschaftsbanken meiner Firma weiterhelfen?
+    - Welche Rolle spielen Hausbanken im Bezug auf Bürgschaften?
+    - Welche Voraussetzungen gelten für die Bürgschaften?
+    - Wohin muss ich mich wenden, wenn ich eine Bürgschaft beantragen möchte?
+    - Muss mir meine Hausbank eine Bürgschaft gewähren?
+    - Brauche ich jetzt eine Bürgschaft?
+- intent: Volkshochschule
+  examples: |
+    - Wie bringt sich die Volkshochschule ein?
+    - Wird meine Fortbildung der Vhs online weitergeführt?
+    - Wurde mein vhs Seminar ins Internet verlegt?
+    - Kann ich meinen vhs Kurs online besuchen?
+    - Schließt auch die VHS im Zuge der Pandemie?
+    - Existiert ein Sonderprogramm der Volkshochschule?
+    - Wie schaut es mit der VHS aus?
+    - Ist die VHS derzeit nutzbar?
+    - Wie sind die Öffnungszeiten der VHS?
+    - Bietet die Volkshochschule auch etwas im Internet an?
+    - Gibt es Kurse von der VHS die ich online besuchen kann?
+    - Gibt es Online Angebote der VHS?
+    - Was bietet die Volkshochschule noch an?
+    - Ab wann hat die VHS wieder offen?
+    - Kann ich jetzt VHS Kurse buchen?
+    - Kann ich den vhs-Kurs besuchen?
+    - Ist die Volkshochschule geöffnet?
+    - Hat die Volkshochschule offen?
+    - Hat die VHS offen?
+    - Volkshochschule
+- intent: Stichwahl 29.03.
+  examples: |
+    - Wo findet die Stichwahl jetzt in meinem Ort statt?
+    - Können die Abstimmungsräume in der Gemeinde genutzt werden?
+    - Aus welchem Grund wird jetzt nur noch per Brief gewählt?
+    - Warum gibt es jetzt nur noch Briefwahl?
+    - Darf ausschließlich mit den Briefwahlunterlagen abgestimmt werden?
+    - Muss ich die Wahlunterlagen von zuhause ausfüllen?
+    - Muss ich zwingend die Briefwahlpapiere nutzen?
+    - Stichwahl am 29. März 2020
+    - Wie wird die Stichwahl für meine Kommune organisiert?
+    - Wie läuft die Stichwahl für den Landkreis ab?
+    - Wo kann ich am Sonntag mein Kreuzchen setzen?
+    - Darf ich in meiner Gemeinde meine Stimme abgeben?
+    - Kann ich vor Ort wählen?
+    - Kann ich auch anders wählen gehen?
+    - Gelten für die Stichwahl nur die Briefunterlagen?
+    - Wird der neue Oberbürgermeister nur per Brief gewählt?
+    - Wo kann ich über den neuen Landrat abstimmen?
+    - Kann ich am Sonntag zur Landkreiswahl gehen?
+    - Muss die Stichwahl per Brief erfolgen?
+- intent: Ausgangssperre
+  examples: |
+    - Darf ich meine Oma besuchen?
+    - Ich will meine familie besuchen
+    - Kann ich meine Eltern besuchen?
+    - Ich will meine Mutter besuchen
+    - darf ich meine Familie treffen?
+    - Ausgangsbeschränkung
+    - Söder Ausgangssperre
+    - sperre
+    - ausgangssperre
+    - Darf ich raus?
+    - Darf ich meine Wohnung verlassen?
+    - Darf ich zur Arbeit?
+    - Darf ich spazierengehen?
+    - Darf ich rausgehen?
+    - Darf ich das Haus verlassen?
+    - Gibt es eine Ausgangssperre?
+    - darf ich noch meine wohnung verlassen?
+    - Darf ich mit dem Hund raus?
+    - wie lange geht die Ausgangssperre
+    - Darf ich noch raus gehen?
+    - Darf man Kumpels zuhause treffen
+    - Pendler
+    - Arbeitsweg
+    - dienstfahrten
+    - darf ich wegen der Ausgangssperre noch auf die Arbeit fahren?
+    - Gibt es Ausgangssperren?
+    - Darf ich noch auf die Arbeit fahren?
+    - Hallo! Ich studiere in Würzburg aber halte mich momentan aufgrund eines Praktikums in Berlin auf. Ich würde gerne wieder nach Würzburg, da ich dort eine Wohnung habe und mein Praktikum am Freitag endet. Ist dies nach wie vor möglich?
+    - Ich möchte gerne nach draußen, weiß aber nicht ob ich darf
+    - Joggen
+    - darf ich am Main joggen gehen?
+    - Spazierengehen
+    - Wie lange dauert die Ausgangssperre
+    - Darf ich draussen Sport treiben
+    - Wie lange ist die Ausgangssperre
+    - Wie lange hält die Ausgangssperrean?
+    - Darf ich draußen Grillen?
+- intent: Schulausfall
+  examples: |
+    - Wo kann ich mich als Lehrerin informieren?
+    - Wann geht der Schulbetrieb wieder weiter?
+    - Was muss das Lehrpersonal beachten?
+    - Welche Regeln gelten für Lehrkräfte?
+    - Wie steht es um die Lehrkräfte?
+    - Arbeiten manche Lehrer?
+    - Müssen Lehrer trotzdem arbeiten?
+    - Kann ich in meiner Schule jemanden erreichen?
+    - Sind Schulen zur Zeit erreichbar?
+    - In meiner Schule geht niemand ans Telefon
+    - Kann ich trotzdem bei der Schule anrufen?
+    - Steht schon ein Schulstart fest?
+    - Wann geht es mit der Schule wieder los?
+    - Wann ist wieder Schulbeginn?
+    - Was passiert am Ende der Osterferien?
+    - Seit wann entfällt die Schule?
+    - Wann kann mein Kind wieder zur Schule?
+    - Warum darf ich nicht zur Schule?
+    - Wie ist es im Bildungsbereich?
+    - Was sagt das Kultusministerium?
+    - Was ist mit Schulveranstaltungen?
+    - Haben irgendwelche Schulen trotzdem offen?
+    - Gibt es Schulen die noch offen haben?
+    - Wird der Unterricht in allen Schularten ausgesetzt?
+    - Für welche Zeit entfällt der Unterricht?
+    - Wie lange wird der Unterricht aussetzen?
+    - Wo kann ich über den Unterrichtsausfall nachlesen?
+    - Wo finde ich Informationen zum Schulbetrieb?
+    - Geht es nach den Osterferien wieder los?
+    - Wie lange fällt die Schule aus?
+    - Finden Schulveranstaltungen noch statt?
+    - Hallo, \nWielange fällt denn der Unterricht und die Prüfungen  aus?
+    - Wann öffnen die Schulen wieder?
+- intent: help
+  examples: |
+    - komisches tool
+    - gibt es eine funktionsübersicht?
+    - du hast mir nicht geholfen
+    - wer füttert dich mit infos?
+    - loser
+    - du hast keine ahnung
+    - wovon hast du eine ahnung
+    - was kannst du?
+    - looser
+    - ein nutzloser bot
+    - du bist doof
+    - was weisst du alles?
+    - du kannst nichts
+    - was weisst du?
+    - du looser
+    - was weißt du noch?
+    - Was weißt Du noch
+    - Wer bist du?
+    - Zur Webseite
+    - Finden die Kurse statt?
+    - Findet die Sommerprüfung im Dialogmarketing nachwiebor am 28.4 statt?
+    - Kennst du die Anja?
+    - Wie geht es dir?
+    - Was kann der Bot besser als die Infoseite der Stadt Würzburg?
+    - finden die seminare statt ?
+    - naja..
+    - optionen
+    - Menü
+    - ???
+    - Lebensmittel versorgungn
+    - menu
+    - Wer hilft mir mit Besorgungen?
+    - Kennst Du auch die Lottozahlen?
+    - du bist dumm
+- intent: gottesdienst
+  examples: |
+    - Live-Übertragungen von Messfeiern?
+    - Welches Portal überträgt Messen und Gottesdienste?
+    - Heilige Messe im Internet anschauen?
+    - Online-Gottesdienste im Bistum Würzburg?
+    - Gibt es einen Stream zur Sonntagsmesse?
+    - Wo kann ich die Sonntagsmesse online sehen?
+    - Finden Feiern zur Erstkommunion statt?
+    - Wird die Erstkommunion noch durchgeführt?
+    - finden Taufen statt?
+    - finden firmungen statt?
+    - finden beerdigungen statt?
+    - beerdigung
+    - In der Kirche beten?
+    - darf ich in die Kirche?
+    - finden gottesdienste statt?
+    - gibt es gottesdienste?
+    - ist Gottesdienst?
+    - Sind Beerdigungen erlaubt?
+    - Darf ich zur einer Beerdigung gehen?
+    - Gottesdienst
+- intent: Kurzarbeit
+  examples: |
+    - Arbeitsausfälle wegen Corona Virus
+    - Erleichterungen für die Kurzarbeit?
+    - Kurzarbeitergeld für Arbeitnehmerinnen und Arbeitnehmer beantragen.
+    - wie hoch ist kurzarbeitergeld
+    - voraussetzungen für kurzarbeit
+    - Wo bekomme ich finanzielle Unterstützung für Lohnfortzahlung?
+    - Ich kann meine Mitarbeiter bezahlen?
+    - Wie soll ich meine Arbeitnehmer bezahlen?
+    - Wie lange kann man Kurzarbeitergeld beziehen?
+    - Wann kann ich Kurzarbeitergeld in Anspruch nehmen?
+    - Welche Voraussetzungen gelten für das Kurzarbeitergeld?
+    - Welche finanziellen Hilfen bietet die Agentur für Arbeit?
+    - Wer hat Anspruch auf Kurzarbeitergeld?
+    - Können Leiharbeiternehmer und Leiharbeiterinnen in Kurzarbeit gehen?
+    - Bekomme ich anfallende Sozialversicherungsbeiträge für ausgefallene Arbeitsstunden bezahlt?
+    - Was ist Kurzarbeit?
+    - Wann habe ich Anspruch auf Kurzarbeitergeld?
+    - Wie kann ich Kurzarbeitergeld beantragen?
+    - Kurzarbeit
+    - Wie schaut es mit Kurzarbeit aus?
+    - kurzarbeit für Auszubildende
+    - Kurzarbeitergeld
+    - wo kann ich kurzarbeitergeld beantragen?
+    - wo bekomme ich kurzarbeitergeld
+    - Azubi kurzarbeit
+- intent: sorry
+  examples: |
+    - Nur dumme Rückmeldungen hier
+    - Diese Information ist für mich wertlos
+    - Deine Informationen kann ich nicht gebrauchen
+    - Das ist echt zu Vergessen
+    - Den Bot hier kann man vergessen
+    - Keine große Hilfe hier
+    - komm lassen wir es bleiben
+    - Bullshit
+    - Echter Bockmist
+    - Du machst mich wahnsinnig
+    - Totaler Blödsinn was Du erzählst.
+    - Hätte ich mir auch selbst denken können.
+    - Das hilft mir absolut nicht weiter.
+    - Was gibst Du für einen Mist von Dir?
+    - Du erzählst nur Mist.
+    - Das ist nicht richtig.
+    - So ein Blödsinn.
+    - Was für eine bescheuerte Antwort!
+    - Du kannst gar nichts.
+    - Was soll ich mit dieser Information bitte anfangen?
+    - Damit kann ich nichts anfangen.
+    - Dieses Feedback war schlecht.
+    - Du bist echt ein Scheiß Bot!
+    - Bist Du blöd?
+    - Deine Rückmeldung gefällt mir gar nicht.
+    - Du gibst wirklich doofe Antworten.
+    - Welche Fragen kannst du beantworten?
+    - Warum gibst Du mir nur blöde Antworten?
+    - Was soll das Gelaber?
+- intent: Hygiene
+  examples: |
+    - Abstand halten
+    - Hände waschen
+    - Warteschlange im Supermarkt
+    - Was muss ich beim Tanken beachten?
+    - Hygiene
+    - Hilft Desinfektionsmittel gegen Corona?
+- intent: Zuwiderhandlung
+  examples: |
+    - Ordnungswidrigkeit
+    - Wird mich die Polizei bestrafen?
+    - Welche Strafen habe ich bei einer Zuwiderhandlung zu befürchten?
+    - Welche Sanktionen verhängt die Polizei?
+    - zuwiderhandlung
+    - laden nebenan ist offen
+    - nachbarladen
+    - Nachbar öffnet sein Geschäft
+    - Betrieb wieder öffnen
+    - Warum darf die Veranstaltung nicht stattfinden?
+    - Darf die  Veranstaltung wie geplant stattfinden?
+    - Wir können unsere Hochzeit nicht mehr absagen, kann die Feier stattfinden?
+    - Ich habe eine Einladung erhalten, die Feier soll stattfinden. Geht das?
+    - Warum darf die Veranstaltung stattfinden?
+    - Die Veranstaltung findet trotzdem statt, ist das erlaubt?
+    - Was passiert, wenn ich meinen Laden wieder öffne?
+    - Mache ich mich strafbar, wenn ich meinen Laden wieder öffne?
+    - Die anderen Betriebe halten sich nicht an die Schließung, darf ich auch öffnen?
+    - Der Kundenverkehr in einem anderen Geschäft läuft weiter, warum?
+    - Warum soll ich schließen, wenn andere noch offen haben?
+    - Mein Konkurrent hat weiter offen, ist das erlaubt?
+    - Der Nachbarladen ist geöffnet.  Darf er das?
+    - nachbar
+    - konkurrent
+    - Zuwiederhandlungen
+- intent: Lieferengpässe
+  examples: |
+    - ist die versorgung gesichert?
+    - toilettenpapier
+    - klopapier
+    - muss ich klopapier hamstern
+    - Kann ich noch Klopapier einkaufen gehen?
+    - kann man sich auf die lieferungen an händler verlassen?
+    - wird es immer ware geben?
+    - sind engpässe in der lieferung ausgeschlossen?
+    - wird es einen lieferengpass geben?
+    - ist die lieferkette gesichert?
+    - könnte es zum lieferstopp kommen bei geschäften?
+    - wird es zu abbrüchen in der lieferkette kommen
+    - lohnt sich hamstern
+    - hamsterkäufe
+    - wie hoch ist die wahrscheinlich dass einzelhändler nicht mehr liefern können
+    - kommt es zu lieferengpässen
+    - ist mit lieferengpässen zu rechnen?
+    - lieferengpässe
+    - lieferengpass
+    - sind hamsterkäufe notwendig?
+    - Kommt es zu Lieferengpässen im geöffneten Einzelhandel?
+    - Eingibt es toilettenpapier
+    - Lebensmittel Versorgung
+- intent: IHK Podcast
+  examples: |
+    - Welche interessanten Angebote gibt es von der IHK Würzburg?
+    - Gibt es Informationen zur Finanzierung, die ich mir anhören kann?
+    - Wo finde ich den Podcast der IHK zu Arbeitnehmerrechten?
+    - Ich habe mitbekommen, dass es ein Hörspiel zu Corona gibt.
+    - Wo kann ich mir Informationen zu Corona auch anhören?
+    - Gibt es einen Corona Podcast?
+    - Podcast der IHK Würzburg Schweinfurt
+    - wo finde ich den Corona Podcast?
+    - IHK Podcast
+- intent: Default Fallback Intent
+  examples: |
+    - Darf ich öffnen
+    - wie hoch ist die Gefahr einer globalen Finanzkrise?
+- intent: prüfungen_Abitur_lernprogramm
+  examples: |
+    - Im Fernsehen lernen
+    - Zuhause Lernen
+    - gibt es schulfernsehen
+    - gibt es ein Lernprogramm?
+    - Kann ich zuhause lernen?
+    - Was ist mit den Prüfungen an der Wirstaftsschule?
+    - Abschlussprüfung Realschule
+    - Was ist mit den Abschlussprüfungen an Mittelschulen?
+    - sollen die Abiturprüfungen verschoben werden?
+    - fällt das Abi aus?
+    - fallen die Abiturprüfungen aus?
+    - was ist mit dem abitur?
+    - werden die Abiprüfungen verschoben?
+    - abiturprüfungen
+    - Prüfungen_Abitur
+    - Finden die Abiturprüfungen statt
+    - Abiturprüfung 2020
+    - abitur 2020
+    - abitur
+- intent: Test_Ablauf
+  examples: |
+    - Testergebnis
+    - Wer ist für die Organisation der Testungen zuständig?
+    - Wer organisiert die Testungen?
+    - Ab wann bin ich für den Test auf Corona zugelassen?
+    - Woher weiß ich ob ich einen Test durchführen muss?
+    - Ich habe Fieber. Ist ein Coronatest nötig?
+    - Ich habe Husten. Muss ich mich testen lassen?
+    - Wer sagt mir wann ein Test notwendig ist?
+    - Muss ich mich jetzt testen lassen?
+    - Muss ich getestet werden?
+    - Woher weiß ich ob ich getestet werden muss
+    - Wer entscheidet ob ich getestet werden muss
+    - Ich weiß nicht ob ich mich testen lassen muss
+    - Ich glaube ich muss getestet werden
+    - gibt es einen Drive Through Test?
+    - Wer wird auf Corona getestet?
+    - Was wird bei einem Test gemacht?
+    - Wie läuft ein Test ab?
+    - Wie läuft so ein test ab?
+    - Wie lange dauert ein Test?
+- intent: Arbeitnehmerrechte_Arbeitsschutz
+  examples: |
+    - kann man meine ausbildung wegen corona kündigen?
+    - Darf Arbeitgeber Urlaub vorschreiben?
+    - Darf Arbeitgeber Urlaub verordnen?
+    - Darf ich im Homeoffice arbeiten?
+    - Arbeitnehmerrechte
+    - Welche Schutzvorkehrungen muss ich als Arbeitgeber treffen?
+    - Darf mich mein Chef nach Hause schicken?
+    - Hat mein Arbeitgeber eine Fürsorgepflicht für mich als Mitarbeiter?
+    - Was muss mein Betrieb gegen die Ansteckungsgefahr tun?
+    - Ab wann muss ich nicht mehr ins Büro?
+    - Welche Rechte habe ich als Arbeitnehmer in Zeiten von Corona?
+    - Wann darf ich der Arbeit fern bleiben?
+    - Welche Sanktionen drohen mir, wenn ich einfach zuhause bleibe?
+    - Darf ich zu Hause bleiben, wenn meine Kollegen ansteckend sind?
+    - Wo finde ich im Internet Hinweise zu Arbeitnehmerrechten?
+    - Welche Maßnahmen muss ich als Arbeitgeber fr meine Mitarbeiter ergreifen?
+    - Welche Schutzmaßnahmen muss mein Unternehmen ergreifen?
+    - Muss mein Arbeitgeber mich von zu Hause aus arbeiten lassen?
+    - Habe ich ein Recht auf Home Office?
+    - Wo kann ich mehr über meine Arbeitnehmerrechte erfahren?
+    - Muss mein Betrieb mir Zeit zur verfügung stellen um den Online-Unterricht zu erarbeiten?
+    - Brauche ich eine Bestätigung von meinem Arbeitgeber?
+    - home office
+    - Wird home office gefördert?
+    - Kann mein Ausbildungsvertrag wegen Corona gekündigt werden?
+    - Habe ich ein Recht auf Homeoffice?
+    - darf mein Arbeitgeber Urlaub anweisen?
+    - Meine Firma meldet Insolvenz an
+    - Wie lange ist mein Gehalt sicher?
+- intent: Handwerkskammer_Ausbildung
+  examples: |
+    - Seminar im Handwerksbereich
+    - Forbildung von der Handwerkskammer
+    - Berufslehrgang
+    - Lehrgang für Meister
+    - Meisterschule
+    - Meisterprüfung
+    - HWK Ausbildung
+    - Bildungszentrum HWK
+    - Ich mache eine Berufsausbildung. Muss ich da hin?
+    - Habe ich in der Firma zu erscheinen?
+    - Muss ich mich trotzdem mit dem Unterrichtsstoff auseinandersetzen?
+    - Muss ich trotzdem für die Prüfung lernen?
+    - Wann nimmt die Berufsschule den Lehrbetrieb wieder auf?
+    - Wann findet mein Unterricht in der Berufsschule wieder statt?
+    - Wann macht die Berufsschule wieder auf?
+    - Läuft aktuell der Berufsschulunterricht?
+    - Müssen Berufsschüler durchgehend im Betrieb sein?
+    - Kann ich als Berufsschüler jetzt in meinen Betrieb?
+    - Muss mein Betrieb die Freistellungspflicht einhalten?
+    - Finden Prüfungen in der Berufsschule statt?
+    - Muss ich zur Berufsschule?
+- intent: Regionale_Ausbreitung_Corona
+  examples: |
+    - Wie viele Menschen haben sich angesteckt?
+    - Wie viele Menschen sind gestorben
+    - Fallzahlen Bayern
+    - Aktuelle Zahlen in Kitzingen
+    - wie hoch ist die anzahl der erkrankten in [NRW](geo-state)
+    - Wie hoch ist die Anzahl an betroffenen Erkrankten in [Frankreich](geo-country)
+    - anzahl der infizierten personen in [italien](geo-country)
+    - wie viele leute in [bayern](geo-state) sind mit corona infiziert
+    - wie viele menschen in [deutschland](geo-country) sind vom corona virus betroffen?
+    - kannst du mir sagen wie viele personen sich mit corona bereits angesteckt haben?
+    - wie hoch ist die anzahl der infizierten mit corona virus
+    - wie viele menschen hab sich mit corona angesteckt
+    - wie viele sind infiziert
+    - statistiken zur anzahl der infizierten
+    - wie viel haben sich schon mit dem virus angesteckt?
+    - wie viele sind schon vom COVID-19 betroffen?
+    - Ausbreitung
+    - Wo finde ich aktuelle Daten zu Corona?
+    - Wo finde ich Statistiken zu Corna?
+    - Wie viele Infizierte gibt es in Deutschland?
+    - Welche Anzahl an Infektionsfällen gibt es?
+    - Wie viele Personen sind infiziert?
+    - Wie schnell steigen die Zahlen der Infizierten?
+    - Wie schnell breitet sich das Virus aus?
+    - Wie schnell steigen die Infektionszahlen?
+    - Wie viele Corona Fälle gibt es in Deutschland?
+    - Welche Länder sind von Corona betroffen
+    - Wie viele Fälle gibt es international
+    - Fallzahlen in europäischen Ländern
+    - Wie breitet sich Corona aus?
+    - Wie breitet sich das Corona Virus in Europa aus?
+    - Aktuelle Zahlen
+    - wie viele Tote gibt es in Bayern?
+    - Wieviele infizierte gibt es aktuell in Würzburg?
+    - wie viele infizierte?
+    - wie geht es Kitzingen?
+    - Wie viele betroffene?
+    - Wie viele Betroffene gibt es
+    - wie viele infizierte in schweinfurt?
+    - Wie viele Infizierte gibt es in Würzburg
+    - Aktuelle Zahlen In by
+    - Abschlussprüfung
+    - Wie hoch sind die aktuellen Fallzahlen in Würzburg?
+    - Infizierte in Würzburg?
+    - Wie viele Menschen sind bereits an Corona gestorben?
+    - Wie sind die Fallzahlen in Aschaffenburg?
+    - aktuelle Statistik
+    - wie viel eleute haben corona in würzburg
+    - Wie viele Menschen sind in deutschland von Corona betroffen?
+- intent: Soforthilfe_Bayern_finanziell
+  examples: |
+    - Liquiditätsprobleme
+    - Liquiditätsschwierigkeiten
+    - staatliche subventionen erhalten
+    - soforthilfe für kleine betriebe
+    - hilfe für handwerksbetriebe
+    - hilfe für handwerker
+    - liquidität
+    - firmen soforthilfe
+    - Unterstützung für Händler
+    - Unterstützung für Selbstständige
+    - Unterstützung für Unternehmen
+    - soforthilfe
+    - soforthile
+    - Wie kann ich meinem Unternehmen finanziell helfen?
+    - Wo finde ich allgemeine Informationen zum Soforthilfeprogramm?
+    - Welche finanziellen Hilfen stellt das Wirtschaftsministerium zur Verfügung?
+    - Welche Landesmittel stehen zur Rettung der Unternehmen zur Verfügung?
+    - Die Liquidität meines Unternehmens ist in Gefahr - was kann ich tun?
+    - Wie funktioniert das Soforthilfeprogramm des bayerischen Wirtschaftsministeriums?
+    - Wer darf von der finanziellen Unterstützung des Freistaats profitieren?
+    - Haben Selbstständige und Freiberufler Anspruch auf finanzielle Unterstützung vom Land Bayern?
+    - Wo bekomme ich Hilfe für die Existenz meines Unternehmens?
+    - Welche Unterstützungsangebote bietet der Freistaat Bayern?
+    - Wo bekomme ich finanzielle Unterstützung für mein Unternehmen?
+    - Was bietet das bayerische Soforthilfeprogramm für Unternehmen?
+    - Fördergeld für unternehmen
+    - förderung für unternehmen
+    - Ich benötige finanzielle Hilfe für mein Unternehmen.
+    - Förderung
+    - Wo gibt es Soforthilfen für Unternehmen?
+    - Wer unterstützt mich?
+    - Wo erhalte ich Hilfe?
+    - wo bekomme ich als Selbstständiger unterstützung?
+    - ich habe Verdienstausfall durch die Allgemeinverfügung. Wer kommt für den Schaden auf?
+    - Praxis schließung förderung
+    - Finanz. Förderung
+    - Wohn kann ich mich mit Fragen zur wirtschaftlichen Unterstützung wenden?
+    - Hallo, welche Förderungen gibt es für die Gastronomie?
+    - wo bekomme ich Soforthlfe
+    - Hotline für Unternehmen in Corona Not
+    - Ich bin selbstständig und benötige finanzielle Unterst
+    - corona soforthilfe
+- intent: Soforthilfeprogramm_Beantragung_Regierung
+  examples: |
+    - Welche Unterlagen benötige ich für die Beantragung von Soforthilfe?
+    - Welche Aufgaben übernimmt die Regierung von Unterfranken in der Corona-Krise?
+    - Wer ist mein Ansprechpartner bei der Beantragung der Soforthilfe?
+    - Welche Förderrichtlinien gelten für das Soforthilfeprogramm?
+    - Wo finde ich die Antragsunterlagen, um das Corona-Soforthilfeprogramm zu nutzen?
+    - Wann muss ich mich an die Regierung wenden?
+    - Ist die Regierung von Unterfranken der richtige Ansprechpartner bei dem Soforthilfeprogramm?
+    - Wer bearbeitet den Antrag auf Soforthilfe?
+    - Ich möchte für meinen Betrieb Soforthilfe beantragen
+    - Wohin muss ich mich wenden um für mein Unternehmen Soforthilfe zu beantragen?
+    - An wen muss sich mich wenden, um Soforthilfe für meine Firma zu beantragen?
+    - Welche Behörde ist für das Soforthilfeprogramm zuständig?
+    - Wer ist für mich in Bad Kissingen zuständig?
+- intent: Quarantäne_Bedingungen
+  examples: |
+    - was genau heißt quarantäne?
+    - was erwartet mich bei quarantäne?
+    - ich hatte kontakt zu einem corona virus erkrankten, muss ich in die quarantäne?
+    - karantäne
+    - bedingungen für die quarantäne
+    - ab wann muss ich in die quarantäne
+    - wer muss in quarantäne
+    - Quarantäne
+    - Welche Behörde ist für die Anordnung von Quarantäne zuständig?
+    - Welchen Ansprechpartner gibt es vor Ort für die Quarantäne?
+    - Wer entscheidet über Quarantäne?
+    - Wer sagt mir, wann ich in Quarantäne muss?
+    - Wer ordnet Quarantäne an?
+    - Was bedeutet Quarantäne?
+    - Muss ich in Quarantäne, weil ich Kontakt zu einem Corona-Viruspatienten hatte?
+    - Wann habe ich ein hohes Risiko mich angesteckt zu haben?
+    - Welche Voraussetzungen gelten für die Quarantäne?
+    - Wann ist Quarantäne notwendig?
+    - Muss ich nach Kontakt mit einem Infizierten in Quarantäne?
+    - Wer muss sich in Quarantäne begeben?
+    - Wann muss ich in Quarantäne?
+    - Warum muss ich in Quarantäne?
+    - Darf ich einkaufen gehen wenn ich in Quarantäne bin?
+    - Wie lange muss ich in Quarantäne bleiben?
+- intent: Kinderbetreuung_Berufstätige_allgemein
+  examples: |
+    - Wann darf ich für mein Kind zuhause bleiben?
+    - Leistungsverweigerungsrecht
+    - Welche Betreuungsangebote für Kinder und Jugendliche stehen zur Verfügung?
+    - Wen kann ich für die Versorgung meiner Kinder engagieren?
+    - Wie sollen Berufstätige ihre Kinder betreuen lassen?
+    - Welche Möglichkeiten der Kinderbetreuung gibt es für Berufstätige?
+    - Wer übernimmt die Fürsorge für mein Kind wenn ich arbeite?
+    - Ausfallende Jugendbetreuung
+    - Schulbetreuung
+    - Allgemeine Informationen zur Kinderbetreuung
+    - Kinderbetreuung_allg
+    - Die Kita hat geschlossen und mein Kind braucht Beaufsichtigung.
+    - Mein Kind muss betreut werden - was soll ich tun?
+    - Was fällt unter das Leistungsverweigerungsrecht des Arbeitnehmers?
+    - Welche Rechte habe ich in Bezug auf Kinderbetreuung?
+    - Wo kann ich mich über die Möglichkeiten der Kinderbetreuung informieren?
+    - Darf ich als Arbeitnehmer für mein Kind daheim bleiben?
+    - Darf ich für die Betreuung meines Kindes zu Hause bleiben?
+    - Muss mir mein Arbeitgeber erlauben für die Kinderbetreuung zuhause zu bleiben?
+    - Welches Recht auf Kinderbetreuung habe ich?
+    - Werden Kita Gebühren erlassen
+    - kinderbetreuung
+    - wie ist das mit dem Umgangsrecht?
+    - Kinderbetreuung Notfall
+- intent: Online_Bestellungen
+  examples: |
+    - Funktioniert Online Handel noch?
+    - Kann ich auf Amazon bestellen?
+    - Darf man noch im Online handel einkaufen ?
+    - Ist es erlaubt bei Online Händlern zu shoppen?
+    - Darf man noch shoppen bei Online Händlern?
+    - Ich habe etwas bei einem Onlinehändler bestellt. Wird das geliefert?
+    - Ich habe auf Ebay etwas gekauft, wird das zugestellt?
+    - Kann ich bei Amazon noch etwas bestellen?
+    - Wie sieht es mit den Online Händlern aus?
+    - Liefern Online Händler noch?
+    - Darf ich online einkaufen
+    - online shopping
+    - Wie sieht es mit online shopping aus
+    - Ich möchte online eine Bestellung aufgeben
+    - Werden meine Einkäufe aus Onlineshops geliefert?
+    - Wie sieht es mit Online Shops aus?
+    - Kann ich online noch einkaufen?
+    - Darf ich online noch shoppen?
+- intent: Positivliste_Betriebe_Oeffnung
+  examples: |
+    - ist die versorgung gefährdet?
+    - versorgung
+    - dürfen noch reperaturen durchgeführt werden?
+    - darf das bauhandwerk noch arbeiten?
+    - dürfen kosmetiker noch arbeiten?
+    - dürfen friseure noch arbeiten?
+    - welche handwerksbetriebe dürfen noch offen haben?
+    - welche handwerker dürfen noch arbeiten?
+    - Welche Läden haben noch offen?
+    - Was hat noch geöffnet?
+    - Wo kann ich einkaufen?
+    - Darf man zum Logopäden?
+    - Darf ich zur Ergo
+    - Hat der Logopäde offen?
+    - Wie ist es mit Ergotherapie?
+    - ist Physiotherapie möglich?
+    - darf ich zur krankengymnastik?
+    - Wie ist es mit Eisdielen?
+    - Hat der Imbiss geöffnet?
+    - Haben die Dönerläden geöffnet?
+    - Haben die Eisdielen geöffnet?
+    - Kann ich noch Essen gehen?
+    - Ist die Gastronomie geöffnet?
+    - Welche Läden haben jetzt noch offen und welche sind zu?
+    - Kann ich noch Lebensmittel einkaufen?
+    - Dürfen Läden noch offen haben?
+    - kann ich noch einkaufen gehen?
+    - sind denn [schwimmbäder](Betriebe) noch offen?
+    - haben [krankenhäuser](Betriebe) noch offen?
+    - haben [drogerien](Betriebe) noch normalen betrieb?
+    - welche läden dürfen noch offen sein?
+    - dürfen laden wie [aldi](Betriebe) und co noch geöffnet sein?
+    - hat der [DM](Betriebe) noch geöffnet?
+    - sind [apotheken](Betriebe) jetzt eigentlich noch geöffnet?
+    - hat die [bank](Betriebe) noch offen?
+    - Haben [banken](Betriebe) noch geöffnet?
+    - Wo kann ich mich über die beschränkte Öffnung von Läden und Geschäfte informieren?
+    - Haben Bau- und Gartenmärkte noch offen?
+    - Kann ich noch in den Gartencenter gehen?
+    - Welche Einzelhandelsgeschäfte sind nicht von Schließung betroffen?
+    - Welche Betriebe und Geschäfte dürfen weiterarbeiten?
+    - Welche Handwerksbetriebe dürfen offiziell noch arbeiten?
+    - Darf ich als Handwerker weiterhin öffnen?
+    - Wo finde ich die Positivliste für Betriebe, deren Öffnung erlaubt ist?
+    - Gibt es eine Liste mit Betrieben, die offen haben dürfen?
+    - Welche Läden dürfen öffnen?
+    - Welche Geschäfte und Läden haben noch offen?
+    - Welche Geschäfte kann ich noch besuchen?
+    - Welche Betriebe dürfen offiziell noch geöffnet haben?
+    - Darf ich noch in den Supermarkt?
+    - Haben Lebensmittelgeschäfte noch offen?
+    - friseur
+    - haben drogerien offen?
+    - Wird noch Post ausgeliefert?
+    - Pflanzen kaufen
+    - Wo kann ich Pflanzen für den Garten kaufen
+    - Darf tabakladen öffnen
+    - Wie lange haben die Geschäfte offen
+    - Wann darf ich wieder zu Friseur gehen?
+    - welche Geschäfte haben geöffnet
+    - Haben Tankstellen geöffnet?
+    - Dürfen Handwerker noch arbeiten?
+    - Wie ist das mit Fitness-Studios?
+    - darf ein kunde ein neues fahrrad bei mir im laden abholen?
+    - Hallo, darf ich als Händler ein neues Fahrrad an einen Kunden ausliefern?
+    - Bouldern
+    - Hallo, kann ich jetzt noch normal zum Orthopäden gehen?
+    - Haben Apotheken geöffnet?
+    - Darf der Großhandel öffnen?
+- intent: Allgemeines_COVID-19
+  examples: |
+    - wie lange bin ich ansteckend?
+    - wie hoch ist ansteckungsgefahr?
+    - wie lange ist die Inkubationszeit?
+    - Was ist Covid19?
+    - Wo gibt es Corona überall?
+    - Welches Bundesland ist von Corona betroffen?
+    - Ist jedes Bundesland betroffen?
+    - Seit wann gibt es den Katastrophenfall?
+    - Wie funktioniert Covid 19?
+    - Wo hat Corona angefangen?
+    - Wer ist Schuld an Corona?
+    - Wann hat Corona begonnen?
+    - Welche Übertragungswege sind bei Corona denkbar?
+    - Welche Übertragungswege sind möglich?
+    - Wie wird Corona übertragen?
+    - Welche Infektionswege gibt es?
+    - Hat der Corona Virus zu einem Katastrophenfall geführt?
+    - Haben wir einen Katastrophenfall?
+    - Gibt es Corona Fälle in Würzburg?
+    - wer ist corona
+    - Was versteht man unter dem corona virus
+    - Um was geht’s eigentlich beim Corona Virus
+    - Was ist los?
+    - Was ist eigentlich passiert?
+    - Corona Virus
+    - Was hat es auf sich mit diesem Corona Virus
+    - Allgemeine Informationen zu Corona
+    - Was ist der COVID-19
+    - Was bedeutet COVID-19
+    - Virus  Infos zu Corona
+    - Was ist der Corona
+    - Allgemeine Infos
+    - Allgemeines zum Corona Virus
+    - Was ist Corona?
+    - warum gibt es corona?
+    - weitere Informationen
+    - Wie hoch ist die Ansteckungsgefahr?
+    - corona
+    - Ist Corona tödlich?
+    - wad heißt corona?
+    - Wann ist man Immun gegen Corona?
+    - Hilft Alkohol gegen Corona?
+    - Gibt es einen Impfstoff gegen Corona?
+    - Ist Corona ansteckend?
+    - Sind Tiere Überträger?
+    - Wo kommt Corona her?
+- intent: Symptome_Corona_Anzeichen
+  examples: |
+    - Wie merke ich, dass ich Corona habe?
+    - Wie viel Prozent der Menschen sterben an dem Virus?
+    - Wie viele Leute zeigen schlimme Symptome?
+    - Welche Krankheiten habe ich zu befürchten?
+    - Wie krank kann ich von dem Virus werden?
+    - Werden alle Patienten sehr krank?
+    - Muss ich vor dem Virus Angst haben?
+    - Wie wirkt sich Corona in meinem Körper aus?
+    - Wie schadet Corona der menschlichen Gesundheit?
+    - Welche schlimmen Folgen hat das Corona Virus?
+    - Wie schädlich ist das Corona-Virus?
+    - Wie gefährlich ist Corona?
+    - Welche Gefahr geht von dem Virus aus?
+    - Wie gesundheitsgefährdend ist der Virus?
+    - Ist Corona sehr gefährlich?
+    - Welche symptome oder anzeichen stehen für den corona virus?
+    - Was passiert wenn ich den Corona Virus habe
+    - Welche Auswirkungen hat der Corona Virus auf den Körper?
+    - woher weiß ich ob ich mich angesteckt habe am corona virus
+    - was sind die genauen Symptome für eine Erkrankung oder COVID-19 bzw. dem Corona virus?
+    - ich bin mir nicht sicher ob ich den corona virus habe
+    - ich habe leichte grippe symptome, bin ich gefährdet?
+    - ist eine erkältung ein anzeichen für corona virus?
+    - Ich bin etwas erkältet, habe ich mich angesteckt am corona virus?
+    - Welche Symptome zeige ich bei einer Infektion mit COVID-19?
+    - Welche Konsequenzen bringt eine Corona-Infektion mit sich?
+    - Wie sehen die Symptome von Corona aus?
+    - ICh habe Fieber, habe ich Corona?
+    - Habe ich Corona, wenn ich viel husten muss?
+    - An welchen Symptomen merkt man, dass man mit dem Virus infiziert ist?
+    - An welchen Anzeichen erkenne ich, dass ich mich infiziert habe?
+    - Welche Symptome weisen Coronapatienten auf?
+    - Welche Symptome zeigt man bei einer Infektion?
+    - Woran erkenne ich, dass ich Corona habe?
+    - Woher merke ich, dass ich Träger des Virus bin?
+    - Symptome und Anzeichen
+    - Habe ich Corona?
+    - Wo muss ich mich melden, wenn ich Symptome habe?
+    - Ich habe fieber
+    - Fieber
+    - Symptome & Anzeichen
+    - wie bekomme ich corona?
+    - Mein Mitbewohner hustet und hat Fieber. Was soll ich tun?
+    - Was sind Syntome?
+    - Wie behandle ich Corona?
+    - Syntome
+    - Symptome
+    - bin ich gefähredet?
+    - gehöre ich zur Risikogruppe?
+    - Ist Corona eine Gefahr?
+    - Ich habe trockenen Husten
+    - Beeinträchtigt Corona meinen Geschmackssinn?
+    - Wie merke ich dass ich Corona habe?
+    - Darf ich alles essen wenn ich Corona habe?
+    - Wie weiß ich, ob ich Corona habe?
+    - Bin ich krank
+- intent: Soforthilfe_Corona_Zuschuss
+  examples: |
+    - Wie lange dauert die Bearbeitung des Zuschuss-Antrags?
+    - Wie schnell bekomme ich mein Geld?
+    - Wie hoch ist der Zuschuss?
+    - Wann wird der Zuschuss ausbezahlt?
+    - Erhalte ich einen Zuschuss oder muss ich das Geld zurückzahlen?
+- intent: Soziale_Einrichtungen
+  examples: |
+    - Malteser
+    - Caritas
+    - Übernachtungsmöglichkeit für Wohnungslosigkeit
+    - Psychotherapeutischer Beratungsdienst
+    - Hilfseinrichtungen für Notleidende
+    - Kostenloses Essen
+    - Einkaufsservice
+    - Anlaufstelle für arme Menschen
+    - Treffpunkte für Menschen in Not
+    - Sozialeinrichtung
+    - Soziale und solidarische Unterstützungsleistungen
+    - Hilfsangebote von Privatmenschen
+    - Hilfsangebote von privaten Anbietern
+    - Familienhilfe
+    - Drogenberatung
+    - Suchtberatung
+    - Wo erhalte ich medizinische Versorgung?
+    - Wohin gehe ich, wenn ich keine Krankenversicherung habe?
+    - medizinische Versorgung für Menschen ohne Krankenversicherung
+    - Essensausgabe bei der Tafel
+    - Bahnhofsmission
+    - Notunterkunft
+    - Welche gemeinnützigen Einrichtungen haben noch geöffnet?
+    - Kann man nach wie vor soziale Einrichtungen aufsuchen?
+    - Existiert eine Notversorgung für Menschen in Armut?
+    - Welche sozialen Einrichtungen sind noch ansprechbar?
+    - Wie können sich Wohnungslose weiterhelfen?
+    - Pflegestützpunkt
+    - Welche Hilfe gibt es für Obdachlose?
+    - Kann jemand für mich Botengänge erledigen?
+    - Wer hilft mir bei meinen Besorgungen?
+    - Wo finde ich Unterstützung für das Einkaufen?
+    - Welche Unterstützungsleistungen bietet die AWO?
+    - Gibt es eine Liste mit Einkaufshilfen?
+    - Wer hilft mir beim Einkaufen?
+    - Wo kann ich Hilfe bekommen?
+    - Wo finde ich Hilfsangebote für meine Großeltern?
+    - wer kann mir helfen
+- intent: Smalltalk_Entwicklung
+  examples: |
+    - wer hat dich gemacht
+    - wer hat dich konzipiert?
+    - wer hat dich programmiert
+    - Wer hat dich erschaffen
+    - Wer hat dich entwickelt?
+    - Botfriends
+    - Wer hat dich gebaut?
+    - Wer hat euch gebaut?
+    - Wer hat den Bot geschrieben?
+- intent: Handwerkskammer_Erreichbarkeit
+  examples: |
+    - HWK Erreichbarkeit
+    - Wo kann ich mich als Handwerksbetrieb beraten lassen?
+    - Wo bekomme ich als Handwerker rechtliche und finanzielle Beratung?
+    - Wo bekomme ich Rechtsberatung für meine Handwerksfirma?
+    - Ich benötige Beratung für mein Handwerksbetrieb. Wi kann ich diese bekommen?
+    - Wie kann ich die Handwerkskammer Unterfrankens erreichen?
+    - Hat die Handwerkskammer noch geöffnet?
+    - Zu welchen Themen berät die Handwerkskammer für Unterfranken?
+    - Welche Hilfe bietet die Handwerkskammer für Unterfranken?
+    - Welche Hilfe steht Handwerksbetrieben zu?
+    - Welche Hotline können Handwerksbetriebe für Beratung nutzen?
+    - An welchen Ansprechpartner können sich Handwerker wenden?
+    - Welche Unterstützungsmöglichkeiten gibt es für mein Handwerksgeschäft?
+    - Wo erhalte ich Informationen bei Liquiditätsproblemen in meinem Fachbetrieb?
+    - Wie kann ich meinem Handwerksbetrieb retten?
+    - Wo bekommen Handwerksbetriebe Hilfe?
+    - Handwerk
+- intent: Finanzielle_Foerderung_Banken
+  examples: |
+    - Welche Voraussetzungen herrschen für einen schnellen Kredit?
+    - Unternehmen in finanzieller Schieflage - was tun?
+    - Kann ich Finanzierungshilfe direkt bei meiner Hausbank beantragen?
+    - Ich muss eine Bürgschaft aufnehmen. Welche Bank hilft mir?
+    - WO kann ich mir zügig Geld leihen?
+    - Ich muss mir Geld leihen. Wer ist mein Ansprechpartner?
+    - Stehen Bürgerschaftsprogramme zur Verfügung?
+    - Welche Bankinstitute helfen bei Liquiditätengpässen?
+    - An welche Bank muss ich mich für einen Kredit wenden?
+    - Welche Unterstützung bieten mir Banken bei Liquiditätsproblemen?
+    - Komme ich jetzt leichter an einen Kredit?
+    - Welche Finanzierungshilfen bieten Kreditinstitute?
+    - Förderung von Banken
+    - Wo bekomme ich fordergelder
+    - woher krieg ich Kredite?
+    - Kredit
+    - Wo bekomme ich Geld?
+    - ich brauche Geld, um meine Gehälter zu zahlen. wer kann helfen?
+    - Förderung Banken
+    - Bank
+    - Soforthilfe Banken
+- intent: Test_Gesundheitsamt
+  examples: |
+    - An welche Behörde muss ich mich für den Test wenden?
+    - Welche Behörde ist für einen Coronatest zuständig?
+    - Ist der Landkreis für die Tests verantwortlich?
+    - Kann ich mich beim Landkreis testen lassen?
+    - Wird mich das Amt für Gesundheit testen?
+    - Kann eine Überprüfung auf Corona beim Amt für Gesundheit stattfinden?
+    - Ist es möglich sind beim Gesundheitsamt auf Corona testen zu lassen?
+    - Wann kontaktiert mich das Gesundheitsamt für den Test?
+    - Kann ich mich beim Gesundheitsamt testen lassen?
+    - Muss ich für den Test zum Gesundheitsamt?
+    - Macht das Gesundheitsamt einen Test mit mir?
+    - Wer ist für die Tests zuständig?
+    - Was macht die KVB?
+    - Wofür ist die KVB zuständig?
+    - Kassenärztliche Vereinigung
+    - Gibt es eine Möglichkeit im Gesundheitsamt getestet werden zu können
+    - Ich möchte mich im Gesundheitsamt testen lassen
+    - Kann ich mich im Gesundheitsamt testen lassen?
+    - Gibt es im Gesundheitsamt einen Test auf Corona?
+    - Gesundheitsamt test
+    - Führt das Gesundheitsamt Tests auf Corona durch?
+    - Gesundheitsamt
+    - Wann darf ich mich testen lassen?
+- intent: Ausbildung_Handwerk
+  examples: |
+    - Dürfen Ausbilder freigestellt werden?
+    - Dürfen Auszubildende freigestellt werden?
+    - Gibt es Zwangsurlaub?
+    - Kann der Auszubildende in Urlaub geschickt werden?
+    - Kann für den Ausbilder Kurzarbeit beantragt werden?
+    - Kann für Auszubildende Kurzarbeit beantragt werden?
+    - Gibt es Kurzarbeit für Auszubildende?
+    - Darf ich von der Ausbildung fern bleiben?
+    - Finde Kurse zur überbetrieblichen Ausbildung statt?
+    - Finden die ÜLU Kurse statt?
+    - Muss ich arbeiten wenn die Berufsschule ausfällt?
+- intent: kein_Hausarzt
+  examples: |
+    - wo bekomme ich eine krankschreibung?
+    - wie bekomme ich einen Hausarzt in Würzburg
+    - ich habe keinen Hausarzt
+- intent: Ehrenamtliche_Hilfsangebote
+  examples: |
+    - ich würde für senioren einkaufen gehen
+    - Nachbarschaftshilfe
+    - Wo darf ich mich für freiwillige Dienste anmelden?
+    - Wo kann ich mich für den Ehrenamtsdienst registrieren?
+    - Wie kann ich ehrenamtliche Dienste verrichten?
+    - Wie kann ich für die Allgemeinheit dienlich werden?
+    - Ich will den Menschen Gutes tun
+    - Ich möchte der Bevölkerung helfen und Gutes leisten
+    - Auf welche Weise kann ich gute Dienste für die Allgemeinheit tun?
+    - wie kann ich mich nützlich machen?
+    - Ehrenamtliche_Hilfe
+    - Welche Unterstützung kann ich persönlich anderen Menschen bieten?
+    - Ist es möglich, privat anderen hilfsbedürftigen Menschen zu helfen?
+    - Auf welche Weise kann ich andere Personen unterstützen?
+    - Ich bin ehrenamtlich tätig und biete meine Unterstützung an
+    - Ich möchte mich ehrenamtlich egangieren. Wie geht das?
+    - Sind aktuell ehrenamtliche Hilfsangebote nachgefragt?
+    - Wie kann ich private Hilfe leisten?
+    - Werden private Hilfsangebote gesucht? Wenn ja, wo soll ich mich melden?
+    - Wo soll ich mich melden, wenn ich ehrenamtlich aktiven werden möchte?
+    - Kann ich mich als ehrenamtlicher Helfer registrieren?
+    - Wie kann ich anderen Menschen während der Corona Krise helfen?
+    - Welche Hilfe kann ich persönlich bieten?
+    - Wie kann ich mich ehrenamtlich engagieren?
+    - Hilfe
+    - Wo kann ich helfen?
+    - Wie kann ich helfen?
+    - Ich möchte helfen.Wo kann ich mich melden?
+    - Hilfe für Risikogruppe
+    - Ich würde für Senioren einkaufen
+- intent: EInkaufen_Klopapier
+  examples: |
+    - Gebrauchsgüter
+    - Wo kann ich mich mit dem Nötigsten versorgen?
+    - Nahrungsversorgung
+    - Darf man nach wie vor Nahrung einkaufen gehen?
+    - Kann ich irgendwo noch Lebensmittel beziehen?
+    - Wo kann ich meinen Wocheneinkauf erledigen?
+    - Kann man jetzt auch am Sonntag Besorgungen machen?
+    - Haben sich die Ladenöffnungszeiten geändert?
+    - Wo kann ich mir Futter besorgen?
+    - Darf ich noch Essen einkaufen gehen?
+    - Sind Läden für die Versorgung des täglichen Bedarfs geöffnet?
+    - Welche Lebensmittelläden haben noch offen?
+    - Einkauf in Lebensmittelgeschäften
+    - Stoßzeiten einkaufen
+    - Gibt es noch Klopapier
+    - Ich möchte Klopapier kaufen gehen
+    - Wie sieht es mit Klopapier aus?
+    - Ich brauche Klopapier
+    - Kann man noch Klopapier kaufen?
+    - Wo kann ich Klopapier kaufen?
+    - Kann ich und meine Freundin zu Mcdonald DriveIn fahren?
+- intent: Dauer_Krise
+  examples: |
+    - Wann ist Corona vorbei?
+    - wann ist die krise vorbei
+    - dauer von der krise
+    - wie lange geht diese corona virus krise noch
+    - bis wann können wir mit dieser corona krise rechnen
+    - wie lange geht diese krise noch
+    - bis wann hält das ganze an?
+    - wann ist es endlich vorbei
+    - wie lange hält der katastrophenfall an
+    - wie lange hält die pandemie an
+    - Wie lange hält die krise an?
+    - Wann ist die Krise vorbei?
+    - wie lange dauert die Krise?
+    - Wie lange dauert die Infektion
+    - wann ist alles vorbei?
+    - Wann ist schätzungsweise die Pandemie vorbei.
+    - Wie lange geht das noch?
+    - Wann werden die Cafes wieder öffnen?
+    - Wird eine Wirtschaftskrise kommen?
+    - wie lange geht noch die ausgangssperre?
+    - Dauer
+    - Wann kann ich wieder zur Arbeit?
+- intent: Flächen_Material_Corona
+  examples: |
+    - beschichtete Oberfläche
+    - Wie lange bleibt das Virus am Material hängen?
+    - Wie lange überlebt das Virus auf Oberflächen?
+    - Metall
+    - Muss ich jetzt vermehrt Griffe und Henkel reinigen?
+    - Bleibt der Virus am Türgriff hängen?
+    - Bleibt der Virus an Material kleben?
+    - Kann der Virus an der Tischdecke und an Geschirr hängenbleiben?
+    - Findet eine Übertragung durch Gegenstände und Oberflächen statt?
+    - Können Dinge mit dem Virus verpestet sein?
+    - Kann man sich anstecken, wenn man Sachen anlangt
+    - Kontamination von Dingen und Gegenständen
+    - Können Gegenstände kontaminiert sein?
+    - Wie ist das Ansteckungsrisiko über Oberflächen?
+    - Kann ich mich beim Kauf von Lebensmitteln über diese anstecken?
+    - Kann ich mich infizieren, wenn ich Essen anfasse?
+    - Kann ich mich beim Einkaufen infizieren?
+    - Kann ich mich infizieren, wenn ich irgendetwas anfasse?
+    - Wird Corona über die Berührung von Oberflächen übertragen?
+    - Wird Corona über Materie übertragen?
+    - Gibt es Schmierinfektionen über Oberflächen?
+    - Wie lange überleben Viren auf Material?
+    - Wie lange überleben Viren auf Flächen?
+    - Wie lange überleben Viren?
+    - Wie lange hält sich Corona auf Material?
+    - Wie lange hält sich Corona auf Flächen?
+- intent: Weiterleitung_Mitarbeiter
+  examples: |
+    - ich muss mit jemandem sprechen
+    - mit mitarbeiter sprehen
+    - mit realem mitarbeiter sprechen
+    - anfrage weitergeben an menschen
+    - können sie meine anfrage an einen menschen weitergeben
+    - mit mensch sprechen
+    - bitte leiten sie mich weiter an einen ihren kollegen
+    - ich will mit jemanden sprechen der sich auskennt
+    - an experten weitergeleitet werden
+    - Mit Kollegen schreiben
+    - ich habe eine komplizierte Frage
+    - scheiß bots
+    - mit echten menschen sprechen
+    - bitte an kollegen weiterleiten
+    - ich will mit einem experten sprechen
+    - ich möchte mein problem mit einem Mitarbeiter klären
+    - weiterleitung an mitarbeiter
+    - ich will einen mitarbeiter sprechen
+    - Ich will kein Bot
+    - ich möchte mit keinem Bot sprechen
+    - ich möchte kein Bot
+    - Ich möchte mit einem Mitarbeiter sprechen
+    - Kann ich mit einem echten Menschen sprechen?
+    - Eh das war jetzt keine Antwort auf meine Frage
+    - Weiterleitung_Mit
+- intent: Abfall_Müll
+  examples: |
+    - was passiert mit dem restmüll?
+    - ich habe sperrmüll
+    - arbeiten die stadtreiniger?
+    - team orange
+    - wie ist es mit müll?
+    - ist der wertstoffhof offen?
+    - kann ich zum wertstoffhof fahren?
+    - wird der biomüll geholt?
+    - wird der gelbe sack geholt?
+    - werden gelbe säcke geholt?
+    - meine restmülltonne ist voll
+    - meine papiertonne ist voll
+    - gibt es die müllabfuhr?
+    - wird müll geholt?
+    - wo kann ich meinen müll hinbringen?
+    - wohin soll ich meinen Müll bringen?
+    - Müllabfuhr
+    - Müllabfuhr Landkreis
+- intent: Test_Ort
+  examples: |
+    - Wo kann ich mich testen lassen?
+    - Wer macht die Corona tests?
+    - Zu welchem Gebäude muss ich für einen Test?
+    - Wo muss ich hin zu einem Corona test?
+    - Wo kann man sich testen lassen?
+    - Wo wird getestet?
+    - An welchen Orten kann man sich auf Corona testen lassen?
+    - Wo kann ich mich auf Corona testen lassen?
+    - Testen lassen
+    - Testen
+    - Wie lange muss man momentan ungefähr auf die Mitteilung des Testergebnisses in Würzburg warten?
+    - Test_Ort
+- intent: Grenzkontrollen_Pendelverkehr_Warenströme
+  examples: |
+    - informationen zu den grenkontrollen
+    - bleibt der warenverkehr in andere länder bestehen?
+    - was bedeuten die die grenzkontrollen für berufs pendler?
+    - darf ich für meine arbeit noch nach österreich fahren?
+    - darf ich als berufspendler in die schweiz fahren?
+    - bis zu welchen datum die grenzkontrollen?
+    - Kann ich nach frankreich fahren?
+    - kann ich nach luxemburg fahren?
+    - kann ich nach dänemark fahren?
+    - kann ich nach österreich fahren?
+    - kann ich in die schweiz fahren?
+    - darf ich nach österreich einreisen?
+    - darf ich einfach in andere länder rüber fahren?
+    - an welchen ländergrenzen werden nun kontrollen eingeführt?
+    - Gibt es kontrollen an den grenzen?
+    - grenzkontrollen
+    - Welche Einschränkungen bestehen im Grenzverkehr?
+    - Welche Folgen haben die Einschränkungen des Grenzverkehrs für die Logistik?
+    - Werden Berufspendler durch die Grenzkontrolle eingeschränkt?
+    - Dürfen Pendler die Grenzen überschreiten?
+    - Fahren noch Züge über die Grenzen hinweg?
+    - Wo finde ich Informationen zum grenzüberschreitenden Verkehr?
+    - Welche PRobleme bestehen für den Warenverkehr?
+    - Funktioniert der Warenverkehr über deutsche Grenzen noch?
+    - Ist der Warenverkehr von Grenzkontrollen betroffen?
+    - Inwieweit sind Logistikunternehmen von den Grenzschließungen betroffen?
+    - Sind Warenlieferungen über Grenzen hinweg möglich?
+    - Bis wann gelten die Grenzkontrollen?
+    - pendler
+    - Darf ich in die Schweiz fahren?
+    - Welche Ausnahmen gelten für LKW fahrer?
+- intent: Ehrenamt_Pflege
+  examples: |
+    - Medizintechnische Assistenz
+    - Mediziner können ehrenamtlich mithelfen
+    - Pfleger und Pflegerinnen gesucht
+    - Wer darf in der Krankenpflege und Krankenbetreuung unterstützen?
+    - Wie kann ich in der Pflege mithelfen?
+    - Ich möchte mich in der Pflege und im medizinischen Bereich einsetzen
+    - Ich bin Pflegefachkraft und einsatzbereit
+    - Ich möchte als Arzt noch mehr helfen
+    - Wo kann ich meine medizinischen Kenntnisse einbringen?
+    - Ich will meine Hilfe anbieten
+    - medizinisch-technische Angestellte
+    - Ich bin im Pflegebereich tätig
+    - Wo wird meine Unterstützung gesucht?
+    - Wo kann ich meine Erfahrung in der Pflege einbringen?
+    - Ich habe medizinische Kenntnisse und will helfen
+    - Ich bin Pfleger und kann helfen
+    - Pflegerische Unterstützung bieten
+- intent: Besuch_Pflegeheim_Altenheim
+  examples: |
+    - Welcher Kontakt ist in Pflegeeinrichtungen noch erlaubt?
+    - Welche neuen Besuchsrechte gelten für Pflegeheim und Senioreneinrichtungen?
+    - Sind betreute Wohneinrichtungen für Alte noch besuchbar?
+    - Wer darf in Altenheime nicht mehr rein?
+    - Darf das Seniorenheim betreten werden?
+    - Kann ich Großeltern im Seniorenstift besuchen gehen?
+    - Mein Opa wird in einem Altenheim betreut. Kann ich ihn besuchen gehen?
+    - Und welchen Umständen kann ich jemanden im Pflegeheim besuchen?
+    - Sind Besuchen von Verwandten und Familienmitgliedern in Pflegeeinrichtungen erlaubt?
+    - Welche Einrichtungen darf ich jetzt nicht mehr besuchen?
+    - In welchen Einrichtungen gelten eingeschränkte Besucherrechte?
+    - Sind Besuche in Pflegeheimen jetzt eingeschränkt?
+    - Welche Maßnahmen werden in Krankenhäusern und Pflegeeinrichtungen ergriffen?
+    - Ist der Zutritt zur Pflegeeinrichtungen gestattet?
+    - Wie sind die Besuche in Pflegeeinrichtungen geregelt?
+    - Darf ich meine Oma im Pflegeheim besuchen?
+    - Und was ist mit Altenheimen?
+    - Darf ich meine Oma im Plegeheim besuchen
+    - Besuch im Pflegeheim noch möglich?
+    - Was hat es mit den 10 Todesfällen im Würzburger Pflegeheim auf sich?
+- intent: Berufsausbildung_Prüfungen
+  examples: |
+    - IHK Prüfungen
+    - Ich konnte an den Prüfungen für meine Berufsausbildung nicht Teilnehmen. Gibt es neue Termine?
+    - Meine Zwischenprüfung für das Frühjahr 2020 ist ausgefallen. Wie geht es weiter?
+    - Werde ich von der IHK über neue Prüfungstermine informiert?
+    - Informiert mich die Industrie und Handelskammer über neue Prüfungstermine?
+    - Sind manche Zwischenprüfungen von der IHK jetzt ersatzlos gestrichen?
+    - Welche Prüfungsleistung muss ich für meine Ausbildung nachholen?
+    - Wann erfahre ich von einem Ersatztermin für meine Zwischenprüfungen?
+    - Wird meine Zwischenprüfung noch stattfinden?
+    - Muss ich meine Zwischenprüfungen nachholen?
+    - Ich mache eine Ausbildung aber einige Prüfungen entfallen - was tun?
+    - Wie wird mit den entfallenen Prüfungen in meiner Ausbildung umgegeangen?
+    - Wo finde ich Informationen über ausgefallene IHK Prüfungen?
+    - finden Abschlussprüfungen statt?
+    - finden die abschlussprüfungen am 28. und 29. april statt?
+    - Wird die Abschlussprüfung am 28 und 29 April stattfinden?
+    - ihk
+    - Wann ist die Abschlussprüfung für Kauffrau im Einzelhandel
+    - Was ist mit den Abschlussprüfung im Mai?
+    - Hallo ich möchte fragen ob morgen findet statt Existenzgründung Seminar Kurs in IHK Würzburg, weil leider ich habe bis jetzt keine Antwort bekommen. In voraus Dankeschön
+    - Wann weiß ich, ob meine Abschlussprüfung verschoben wird?
+    - Wann bekommt man bescheid,ob die kaufmännische Prüfung Ende April statt findet?
+    - Ich habe am 28. April prüfung. Findet diese statt?
+    - Prüfungen
+    - Wann weiß ich, ob meine Abschlussprüfungen meiner Ausbildung verschoben wird=
+    - Ausbilderprüfung nachholen
+    - Findet die Abschlussprüfung statt?
+    - Muss ich die Zwischenprüfung nochmal schreiben
+    - Findet die Abschlussprüfung zum Verkäufer am 28.4 und 29.4.2020 statt?
+    - Und Abschlussprüfung für Groß und Außenhandel
+    - ausbildung
+    - Wann finden wieder Prüfungen statt?
+    - Verlängerung der Ausbildungszeit wegen Corona
+    - Abschlussprüfung Ausbildung
+- intent: Oeffnung_Rathaus_StadtWuerzburg
+  examples: |
+    - Ich habe einen Termin im Rathaus
+    - Hat das Rathaus noch offen?
+    - Wie ist es mit der Kantine im Rathaus?
+    - Ist das Einwohnermeldeamt geöffnet?
+    - Kann ich mein Auto anmelden?
+    - Ich muss zur KFZ Stelle
+    - Arbeitet noch jemand im Bürgerbüro im Rathaus?
+    - Habe ich Zugang zum Bürgerbüro ?
+    - Wer ist im Rathaus noch ansprechbar?
+    - Wie kann ich Dienstgänge im Rathaus erledigen?
+    - Wie kann ich Termine im Rathaus vereinbaren?
+    - Ab wann hat das Rathaus der Stadt Würzburg geschlossen?
+    - Warum ist das Rathaus der Stadt Würzburg zu?
+    - Ich muss etwas im Rathaus erledigen. Wie kann ich das tun?
+    - Wie erreiche ich meinen Ansprechpartner im Rathaus?
+    - Ist das Rathaus geöffnet?
+    - Hat das Rathaus offen=
+    - Kann ich noch ins Rathaus gehen?
+    - baugenehmigung
+- intent: Online_Shopping
+  examples: |
+    - wann kommt meine online lieferung
+    - was ist mit meiner online lieferung
+    - wie ist die lange zu internet bestellungen
+    - ich möchte etwas online bestellen, ist das noch möglich oder erlaubt?
+    - kommen meine online bestellungen aus dem internet noch an
+    - gibt es einschränkungen im online handel
+    - liefern online shops noch aus
+    - kann ich noch online bestellen?
+    - geht online shopping noch?
+    - werden meine online bestellungen ausgeliefert?
+    - darf ich online shoppen?
+    - online shopping
+    - kann ich online noch bestellen?
+    - Liefern Online Händer noch aus?
+    - Darf ich noch online shoppen?
+- intent: Stundungen_Steuern_Erleichterung
+  examples: |
+    - Bieten die Ministerien eine Unterstützung bei den Steuern?
+    - Welche neuen Regeln gelten für die Vollstreckung der Steuerabgaben?
+    - Wo kann ich mich über die Senkung von Vorauszahlungen informieren?
+    - Welche Art von Steuern lassen sich aufschieben und wie?
+    - Werden finanzielle Hilfen auch im Bezug auf Steuern angeboten?
+    - Welche steuerrechtlichen Erleichterungen bietet das Finanzministerium?
+    - Gibt es Steuererleichterungen für Unternehmen und Betriebe in Bayern?
+    - Ist es möglich Steuerabgaben in die Zukunft zu schieben?
+    - Fallen Steuern jetzt zu einem anderen Zeitpunkt an?
+    - Welche Steuern kann ich stunden?
+    - Was bedeutet die Stundung von Steuern?
+    - Kann ich die Steuerzahlung aufschieben?
+    - Sind Stundungen von Steuern möglich?
+    - Kann ich die Zahlung von Steuern für mein Unternehmen verschieben?
+- intent: Zentrum_Telemedizin_Unterstützung
+  examples: |
+    - Welche Behandlungsmethoden sind für Hausärzte jetzt ratsam?
+    - Kann ich meine Arztpraxis an die Corona-Krise anpassen?
+    - Können Behandlungen über den Computer oder über Videokommunikation stattfinden?
+    - Wie kann die Behandlung von Patienten in Arztpraxen und Kliniken gelingen?
+    - Kann mich mein Arzt von zu hause aus behandeln?
+    - Gibt es Lösungen der Telemedizin für die Patientenversorgung?
+    - Können Patienten auch von zu Hause aus behandelt werden?
+    - Welche Schutzmaßnahmen kann ich in meiner Arztpraxis ergreifen?
+    - Wie kann eine normale Patientenversorgung sicher gewährleistet werden?
+    - Wie sollen Ärzte und Kliniken jetzt ihre Patienten versorgen?
+    - Wie kann ich als Arzt meine Patienten betreuen?
+    - Gibt es Lösungen für Arztpraxen, um Patienten telemedizinisch zu betreuen?
+    - Wie können sich Arztpraxen für Corona-Patienten ausrüsten?
+    - Telemedizin?
+    - was ist Telemedizin?
+- intent: Exportgeschäfte_Unterstützung
+  examples: |
+    - Refinanzierung für wegbrechende Exporte?
+    - Wir können keinen Außenhandel mehr treiben. Absicherungsmöglichkeiten?
+    - Außenhandelsgeschäft brechen ein. Wie kann ich mich absichern?
+    - Meine Firma darf keine Schiffslieferungen mehr nach China durchführen.
+    - Warenlieferungen ins Ausland können nicht mehr geschehen - was nun?
+    - Mein Betrieb kann Waren nicht mehr nach China liefern. Welche Möglichkeiten habe ich?
+    - Wie kann ich mein exportorientiertes Unternehmen absichern?
+    - Gibt es Entschädigungen für ausfallende Exporte und Lieferleistungen?
+    - Werde ich für nicht mögliche Exporte entschädigt?
+    - Was soll ein Unternehmen tun, das in Risikogebiete exportiert?
+    - Wo finde ich Unterstützung und Beratung im Bezug auf meine Exporte?
+    - Meine Firma exportiert in Corona Risikogebiete und ich brauche finanzielle Unterstützung
+    - Ich habe Probleme mit Exporten nach und aus China. Was kann ich tun?
+    - Übernimmt der Bund aktuell Exportkredigarantien für Exporte in Corona Gebiete?
+    - Übernimmt der Bund aktuell Exportkredigarantien für Exporte nach Cina?
+    - Wo finde ich Informationen zu Hermesdeckelungen?
+    - Wo finde ich Informationen zu Exportkreditgarantien?
+    - Welche finanziellen Unterstützungen gibt es in Sachen Exporte?
+    - Wie wir exportorientierten Unternehmen unter die Arme gegriffen?
+    - Ich habe ein exportorientiertes Unternehmen und brauche Hilfe
+- intent: Reiseverkehr_Urlaub
+  examples: |
+    - Dürfen noch irgendwelche Reiseziele genutzt werden?
+    - Wer holt mich aus dem Urlaubsgebiet ab?
+    - Rückholaktion der  Bundesregierung
+    - Sind Urlaube innerhalb Europas noch gestattet?
+    - Darf ich durch Europa touren?
+    - Wie sieht es mit Interrail aus?
+    - Kann ich meine Expedition starten?
+    - Sind touristische Ausflüge erlaubt?
+    - Gibt es Reiseanbieter die aktuell noch Touristen annehmen?
+    - Welche Flughäfen bieten noch Urlaubsreisen an?
+    - Welche Urlaubsziele können noch angeflogen werden?
+    - Tourismusdestination
+    - Wann darf ich wieder in den Urlaub fahren?
+    - Kann ich meine Buchung rückgängig machen?
+    - Gibt es das Geld für gebuchte Urlaube zurück?
+    - Werden Pauschalreisen zurückgezahlt?
+    - Darf ich noch in den Urlaub fahren?
+    - ich fliege am wochenende nach [Polen](geo-state). Ist das noch erlaubt?
+    - Über ostern haben wir urlaub geplant, soll man den lieber verschieben?
+    - Mein urlaub steht an, was ist zu tun?
+    - würden sie mir empfehlen noch in den urlaub zu fahren?
+    - Muss ich meinen urlaub stornieren?
+    - darf ich in den urlaub fahren?
+    - Welche Einschränkungen gelten für den Reiseverkehr?
+    - Wie ist der Reiseverkehr derzeit eingeschränkt?
+    - Welche Reisen sind noch erlaubt?
+    - Welche Hinweise gelten für Auslandsreisen?
+    - Darf ich zur Zeit eine Auslandsreise machen?
+    - Ist es erlaubt in andere Länder zu reisen?
+    - Darf ich jetzt in den Urlaub fahren?
+    - Welche Vorschriften gelten für Reisen ins Ausland?
+    - Wie ist der grenzüberschreitende Reiseverkehr geregelt?
+    - Darf man das Land noch verlassen?
+    - Ist es ratsam den Urlaub zu verschieben?
+    - Kann ich meinen Auslandsurlaub antreten?
+    - Reiseverkehr
+    - Muss ich meinen Hotelaufenthalt selbst stornieren?
+    - kriege ich das Geld bei Pauschalreisen zurück?
+    - Was passiert mit meiner Pauschalreise?
+- intent: Oeffentliche_Verkehrsmittel
+  examples: |
+    - Sollte ich derzeit noch den Zug nehmen?
+    - Ist es empfehlenswert mit der Bahn zu fahren?
+    - Wie sollte ich mich beim Bahnfahren verhalten?
+    - Sollte ich aktuell in die Tram steigen?
+    - Ist es ratsam Mitfahrgelegenheiten zu benutzen?
+    - öffentlicher Nahverkehr
+    - Kann ich Uber noch nutzen?
+    - Fahren Taxis
+    - Ist Straßenbahn fahren verboten?
+    - Ist Bus fahren verboten?
+    - Ist Straßenbahn fahren erlaubt?
+    - Ist Bus fahren erlaubt?
+    - Fährt der Bus noch?
+    - Bus
+    - Welche Fortbewegungsmittel sollten aktuell genutzt werden?
+    - Wie darf ich mich jetzt noch fortbewegen?
+    - Sollte ich jetzt lieber Rad fahren oder zu Fuß gehen?
+    - Sollte ich jetzt lieber zu Fuß gehen?
+    - Ist das Fahrrad jetzt zu bevorzugen?
+    - Wo kann ich mich über neue Bedingungen im ÖPNV informieren?
+    - Welche Verhaltensregeln gelten in Bus und Straßenbahn?
+    - Welches Verhalten sollte in Bussen und Straßenbahnen an den Tag gelegt werden?
+    - Wie muss ich mich in öffentlichen Verkehrsmitteln verhalten?
+    - Kann man die öffentlichen Verkehrsmittel noch benutzen?
+    - Ist es ratsam die öffentlichen Verkehrsmittel zu nutzen?
+    - Wie soll ich mich im öffentlichen Personalverkehr verhalten?
+    - Darf ich noch Bus fahren?
+    - Welche Empfehlungen gelten in Bezug auf den ÖPNV?
+    - Wie ist die Situation bei öffentlichen Verkehrsmitteln?
+    - Sollte ich jetzt lieber mit dem eigenen Auto fahren?
+    - Kann ich noch die Straßenbahn benutzen?
+    - straßenbahn
+    - fahrrad
+    - zugverkehr
+    - Darf ich Mitfahrgelegenheiten nutzen?
+    - Fährt die Straßenbahn?
+    - Fahren Taxis?
+    - Darf ich noch mit Fahrgemeinschaft auf die Arbeit fahren?
+- intent: Hotelgast_Verpflegung
+  examples: |
+    - kriege ich als hotel gast noch essen im hotel
+    - darf in hotels gekocht werden
+    - können hotels noch essen ausgeben?
+    - dürfen hotels noch verpflegen?
+    - gibt es verpflegung in hotels?
+    - kann man in hotels noch essen?
+    - hotel restaurants
+    - dürfen hotels noch essen ausgeben?
+    - dürfen hotels noch gastronomie betrieben?
+    - gibt es noch restaurant betrieb im hotel?
+    - kriege ich noch essen im hotel?
+    - Darf man gäste im hotel noch verpflegen?
+    - Darf der Hotelgast verpflegt werden?
+    - hotel
+- intent: Lieferservices_WUE
+  examples: |
+    - Haben manche Gastwirtschaften offen?
+    - Ich will in einem Restaurant essen gehen
+    - Ich möchte irgendwo essen gehen
+    - Abholmöglichkeiten für Speisen
+    - Essen zum Abholen
+    - Drive in
+    - Takeaway
+    - Rabattaktionen von Restaurants
+    - Essensmitnahme
+    - Kann ich eine Speise zum Mitnehmen bestellen?
+    - Liefert die Gastronomie jetzt ihre Gerichte aus?
+    - Auslieferung von Speisen
+    - Gibt es Gaststätten, die Speisen ausliefern?
+    - Werden Speisen jetzt von Restaurants nach Hause gebracht?
+    - Hat der Einzelhandel in Würzburg neue Liefermöglichkeiten?
+    - Haben sich neue Lieferservices etabliert?
+    - Wo wird Essen geliefert?
+    - Welche Bars und Restaurants bedienen mich zuhause?
+    - Gibt es Mitnahmeangebote von Lokalen?
+    - Welche Cafes und Lokale bieten Essen zur Mitnahme an?
+    - Welche Restaurants bieten Lieferservice an?
+    - Kann ich noch irgendwo essen gehen?
+    - Kann ich mir Essen liefern lassen?
+    - Welches Restaurant liefert seine Speisen aus?
+    - Ist es möglich Seisen online zu bestellen?
+    - Darf ich mir Essen bei einem Restaurant abholen gehen?
+    - wer liefert essen in Würzburg?
+- intent: Bundeshilfen_Wirtschaftsministerium
+  examples: |
+    - Bundeshilfen
+    - Welches Spektrum an Liquiditätshilfen steht Unternehmen zur Verfügung?
+    - Können Freiberufler ebenfalls finanzielle Unterstützung beantragen?
+    - Wie kann ich meine Existenz absichern?
+    - Was kann ich gegen die drohende Insolvenz tun?
+    - Muss ich mein Geschäft bald aufgeben?
+    - Welche Bedingungen gelten für kleine gewerbliche Unternehmen und Freiberufler?
+    - Welche Finanzhilfen können mittelständischen Firmen in Anspruch nehmen?
+    - Welche Hilfen und finanzielle Unterstützung gibt es für kleine und mittlere Betriebe?
+    - Welche Unterstützungsmaßnahmen für Firmen und Betriebe gelten deutschlandweit?
+    - Mein Unternehmen braucht staatliche Liquiditätshilfen. Wo finde ich Informationen?
+    - Auf welche finanzielle Unterstützung von Staat kann ich zurückgreifen?
+    - Welche finanziellen Hilfen bekomme ich vom Bund?
+    - Was beinhaltet der Schutzsschild für Unternehmen in Deutschland?
+    - Welche Maßnahmen fallen unter den Schutzsschild für Beschäftigte und Unternehmen?
+    - Welche Liquiditätshilfen bietet das Bundeswirtschaftsministerium an?
+    - Was tut der Bund für Unternehmen in der Krise?
+    - Wie kann ich Unterstützung für meine Firma beantragen?
+    - staatliche subventionen erhalten
+    - Wo kann ich die staatliche Finanzhilfe beantragen?
+    - Wo kann ich Unterstützung beantragen?
+- intent: Seniorentelefon_aeltere_Menschen
+  examples: |
+    - Unterstützungsleistungen für Oma und Opa
+    - Telefonnummer für Rentner und Ältere, die nichtmedizinische Hilfe brauchen
+    - Hotline speziell für alte Menschen und Seniorinnen
+    - Seniorentelefon
+    - Wie kann die Versorgung von Rentnern und alten Menschen gelingen?
+    - Gibt es eine Versorgungshilfe für Senioren und alte Menschen, die aus dem Haus gehen wollen?
+    - Wohin dürfen sich alte Menschen wenden, die nicht mehr zum Einkaufen gehen können?
+    - Welche Hilfe bietet die Stadt Würzburg alten und kranken Menschen?
+    - Wohin können sich Senioren mit Fragen wenden?
+    - Welche Empfehlungen gibt es für Seniorinnen und Senioren?
+    - Wie sollten sich alte Personen aktuell verhalten?
+    - Ist es älteren Menschen erlaubt draußen zu spazieren?
+    - Gibt es Unterstützungsangebote der Wohlfahrtsverbände in Würzburg?
+    - Wo können sie Senioren Hilfe holen?
+    - Wohin können sich ältere Menschen und Senioren wenden, wenn sie ein Problem haben?
+    - Sollten sich Senioren noch draußen aufhalten?
+    - Dürfen Alte und Kranke noch draußen rumlaufen?
+    - Ich brauche Hilfe beim einkaufen
+    - Ist es möglich, Menschen mit Behinderung beim Spazierengehen zu begleiten, wenn ich NICHT mit ihnen in häuslicher Gemeinschaft lebe?
+    - Wer hilft mir, wenn ich nicht mehr aus dem Haus gehen kann?
+- intent: Agentur_fuer_Arbeit
+  examples: |
+    - Wann darf ich die Arbeitsagentur anrufen?
+    - Muss ich beim Arbeitsamt anrufen?
+    - Gibt es eine Hotline beim Arbeitsamt?
+    - Welche Hotline hat die Agentur für Arbeit eingerichtet?
+    - Wann kann ich die Agentur für Arbeit kontaktieren?
+    - Kann ich noch zum Jobcenter gehen?
+    - Kann ich beim Jobcenter noch anrufen?
+    - Ist das Jobcenter geschlossen?
+    - Ist die Agentur für Arbeit geschlossen?
+    - Wie kann ich zum Jobcenter Kontakt aufnehmen?
+    - Wie kann ich Kontakt zu Agentur für Arbeit aufnehmen?
+    - Wie erreiche ich die Agentur für Arbeit?
+    - Wie erreiche ich das Jobcenter?
+    - Kann ich meinem Termin beim Jobcenter wahrnehmen?
+    - Hat die Agentur für Arbeit noch geöffnet?
+    - Hat das Arbeitsamt offen?
+    - mein Geschäft musste schließen. meine Mitarbeiter sind zuhause. wo bekomme ich hilfe?
+    - arbeitslos durch corona
+    - Wo ist hinterlegt das Nebentätigkeiten nicht ausgeübt werden dürfen
+- intent: Kinderbetreuung_kritische_Infrastruktur
+  examples: |
+    - Habe ich als Mitarbeiter im Gesundheitswesen bessere Bedingungen für die Versorgung meiner Kinder?
+    - Haben Angestellte im Gesundheitsbereich mehr Rechte für die Kinderbetreuung?
+    - Ich bin in der Pflege tätig. Habe ich andere Möglichkeiten der Kinderbetreuung?
+    - Betreuung von Kindern, deren Eltern zur kritischen Infrastruktur gehören
+    - Notbetreuung_Kinder
+    - Kinderbetreuung_kritische
+    - Wo kann ich prüfen, ob ich zur kritischen Infrastruktur gehöre?
+    - Gibt es eine Notbetreuung für Kinder von Ärzten, Apothekern und. ähnlichen Berufen?
+    - Unter welchen Voraussetzungen wird mein Kind trotzdem in der Schule oder Kita betreut?
+    - Darf ich mein Kind trotzdem in die Kita geben?
+    - Wem steht die Notbetreuung in Kinderbetreuungseinrichtungen zu?
+    - Welche Berufe gehören zur kritischen Infrastruktur?
+    - Gehöre ich zur kritischen Infrastruktur?
+    - Gehört mein Beruf zur kritischen Infrastruktur?
+    - Welche Eltern dürfen trotz Corona ihr Kind in die Kinderbetreuung geben?
+    - Bin ich berechtigt mein Kind in die Notbetreuung zu geben?
+    - Unter welchen Umständen kann ich mein Kind in die Notbetreuung geben?
+    - Kindergarten
+    - Wer bietet Notbetreuung für Kinder an?
+- intent: Verhalten_privates_Umfeld
+  examples: |
+    - Gibt es grundsätzlich Hinweise zum persönlichen Verhalten?
+    - Welche Verhaltensanpassungen sind nötig um eine Infektion zu vermeiden?
+    - Wie kann ich eine Infektion vorbeugen?
+    - Mit wem darf ich mich jetzt noch treffen?
+    - Welche Treffen kann ich noch wahrnehmen?
+    - Welchen Abstand muss ich zu anderen Menschen halten?
+    - Wie kann ich mich vor einer Infektion mit dem Virus schützen?
+    - Gibt es einfache Regeln, die ich im privaten Umfeld befolgen sollte?
+    - Welche Schutzmaßnahmen sollte ich privat ergreifen?
+    - Muss ich mich von anderen Menschen fernhalten?
+    - Welche Ratschläge kann ich Freunden und Familienmitgliedern geben?
+    - Welche Ratschläge kann ich anderen Menschen geben?
+    - Muss ich den direkten Kontakt mit Menschen jetzt vermeiden?
+    - Ist es erlaubt Freunde und Nachbarn zu besuchen?
+    - Wie muss ich mein Verhalten aktuell einschränken?
+    - Welche Verhaltensempfehlungen gibt es in Bezug auf Corona?
+    - Wie sollte ich mich jetzt verhalten?
+    - Sollte ich von einem Besuch meiner Großeltern absehen?
+    - Kann ich noch zu meinen Nachbarn gehen?
+    - wie kann ich mich schützen
+    - Darf ich m(16) meine Freundin in Marktbreit besuchen gehen
+    - Darf ich meine Freundin besuchen gehen in marktbreit weiblich und 16
+    - Darf ich eine Freundin besuchen, die ich auf Tinder kennen gelernt habe? Also wir sind noch nicht zusammen, daher keine Lebenspartner. Dürfen wir uns trotzdem treffen?
+    - Darf mich meine Freundin besuchen?
+    - Darf ich zu meiner Freundin?
+    - Darf ich noch meine Freundin besuchen?
+    - Dürfen mich Freunde besuchen?
+    - Wann darf ich wieder soziale Kontakte persönlich pflegen?
+- synonym: Apotheke
+  examples: |
+    - Apotheke
+    - Arzneiausgabe
+    - Apotheken
+    - Arzneiläden
+    - Pharmaläden
+    - Pharmazeuten
+- synonym: Arztpraxis
+  examples: |
+    - Arztpraxis
+    - Arzt
+    - Zahnarzt
+    - Frauenarzt
+    - Chiruge
+    - Orthopäde
+    - Ärzte
+    - Ärztehaus
+    - Psychologe
+    - Physiologe
+- synonym: Autovermietstationen
+  examples: |
+    - Autovermietstationen
+    - sixt
+    - Automiet stationen
+    - Autovermietstation
+- synonym: Banken
+  examples: |
+    - Banken
+    - Finanzhäuser
+    - Kredithäuser
+    - Geldhäuser
+- synonym: Baumärkte
+  examples: |
+    - Baumärkte
+- synonym: Baustellen
+  examples: |
+    - Baustellen
+    - Baugewerbe
+- synonym: Bibliotheken
+  examples: |
+    - Bibliotheken
+    - bibliothek
+    - bücherei
+    - bücherein
+- synonym: Bordellbetriebe
+  examples: |
+    - Bordellbetriebe
+    - Bordell
+    - puff
+    - bordel
+    - bordellbetrieb
+- synonym: Bäcker
+  examples: |
+    - Bäcker
+    - bäckereien
+    - backstuben
+- synonym: Deutsche Post
+  examples: |
+    - Deutsche Post
+    - deutsche post AG
+    - post
+    - DHL
+    - Hermes
+    - post stellen
+    - Paketstationen
+- synonym: Dienstleistungsanbieter
+  examples: |
+    - Dienstleistungsanbieter
+    - Dienstleistungen
+    - Schule
+    - Kindergarten
+    - Dienstleister
+    - friseur
+    - tabakladen
+    - tankstelle
+    - Optiker
+    - Sparkasse
+    - Online Händler
+    - Online Handel
+    - Kindergärten
+    - Kitas
+    - Kita
+    - tankstellen
+    - tankstellenshops
+- synonym: Durchfall
+  examples: |
+    - Durchfall
+    - verstopfungen
+    - dünnschiss
+    - dünnschiß
+- synonym: Einzelhandel
+  examples: |
+    - Einzelhandel
+    - DM
+    - Drogeriemarkt
+    - Einkaufsladen
+    - Läden
+    - Baumarkt
+    - Tierbedarf
+    - Fressnapf
+    - Tierläden
+    - Kleidungsladen
+    - drogerien
+    - douglas
+    - kik
+    - klamottenläden
+    - einzelhändler
+- synonym: Fahrradreparatur
+  examples: |
+    - Fahrradreparatur
+    - Fahrradersatzteilhandel
+    - fahrradhandel
+- synonym: Gartengeschäfte
+  examples: |
+    - Gartengeschäfte
+    - Gartenläden
+- synonym: Gastronomie
+  examples: |
+    - Gastronomie
+    - Restaurants
+    - McDonals
+    - Burger King
+    - Döner
+    - Pizzeria
+    - Restaurant
+    - Eisdiele
+    - Café
+    - Cafe
+    - Clubs
+    - Disko
+    - Diskothek
+    - Disco
+    - Imbissbuden
+- synonym: Gebäudereiniger
+  examples: |
+    - Gebäudereiniger
+    - fassadenreiniger
+    - denkmalreiniger
+- synonym: Getränkemärkte
+  examples: |
+    - Getränkemärkte
+    - getränkemarkt
+    - getränkehandel
+    - getränkehändler
+    - getränkeladen
+- synonym: Großhandel
+  examples: |
+    - Großhandel
+    - metro
+    - selgros
+- synonym: Halsschmerzen
+  examples: |
+    - Halsschmerzen
+    - schmerzen im hals
+    - halschmerzen
+    - kratzigen hals
+    - halsweh
+    - hals entzündet
+    - entzündeter hals
+    - hals beschwerden
+- synonym: Hotels
+  examples: |
+    - Hotels
+    - Unterkunft
+    - Jugendherrberge
+    - Zeltplatz
+    - Campingplatz
+    - campingbetriebe
+    - unterkünfte
+    - ferienhäuser
+    - ferienwohnungen
+    - hotel
+    - hotelkette
+    - hotelketten
+- synonym: Husten
+  examples: |
+    - Husten
+    - Huste
+    - hust
+    - keuchhusten
+    - hustenanfall
+    - hustenanfälle
+    - trockener husten
+- synonym: Hörgeräteakuster
+  examples: |
+    - Hörgeräteakuster
+    - akustiker
+    - hörgerätsakustiker
+    - hörgerätshandel
+    - hörgerätsbetrieb
+- synonym: KFZ-Werkstätten
+  examples: |
+    - KFZ-Werkstätten
+    - KFZ
+    - Werkstätten
+    - Ersatzteilhandel
+    - KFZ werkstatt
+- synonym: Kino
+  examples: |
+    - Kino
+    - Kinos
+    - Cinemaxx
+    - Cinewolrd
+    - cineworld
+    - zentralkino
+- synonym: Landhanel
+  examples: |
+    - Landhanel
+    - düngergeschäfte
+- synonym: Lebensmittelhandel
+  examples: |
+    - Lebensmittelhandel
+    - lebensmittelhändler
+    - denns
+    - biomärkte
+    - biomarkt
+    - penny
+    - kupsch
+    - edeka
+    - Aldi
+    - norma
+    - lidl
+    - teegut
+    - rewe
+- synonym: Lieferung
+  examples: |
+    - Lieferung
+    - lieferungen
+    - montage
+- synonym: Lundenentzündung
+  examples: |
+    - Lundenentzündung
+    - Lungenentzündung
+- synonym: Medizinische einrichtung
+  examples: |
+    - Medizinische einrichtung
+    - medizinische einrichtungen
+- synonym: Nase läuft
+  examples: |
+    - Nase läuft
+    - laufende nase
+- synonym: Niesen
+  examples: |
+    - Niesen
+    - nisen
+- synonym: OBI
+  examples: |
+    - OBI
+- synonym: Rachenentzündung
+  examples: |
+    - Rachenentzüngung
+    - Rachenendzündung
+    - Rachenentzuendung
+- synonym: Rossmann
+  examples: |
+    - Rossmann
+- synonym: Sauna
+  examples: |
+    - Sauna
+    - Badeanstalten
+    - Therme
+    - Thermalbäder
+    - Bäder
+    - Schwimmbäder
+    - Schwimmbad
+    - wellnesszentren
+    - wellnesshäuser
+    - wellness
+    - spa
+    - nautiland
+    - wolfgang adami bad
+    - sandermare
+    - dallenbergbad
+    - dalle
+    - nauti
+    - adami bad
+- synonym: Spielhallen
+  examples: |
+    - Spielhallen
+    - Casinos
+    - casino
+- synonym: Sporthallen
+  examples: |
+    - Sporthallen
+    - fitnesstudios
+    - fitness
+    - fitnessräume
+    - MCfit
+    - Fitone
+    - fit one
+    - mc fit
+    - fitti
+    - gyms
+    - yogastudios
+    - yoga studio
+    - yoga einrichtungen
+    - turnhallen
+    - dreifachturnhallen
+    - box
+    - fitness box
+    - reha sport
+    - livestyle
+    - kraftmühle
+    - crossfit würzburg
+    - mainfitness
+- synonym: Stadtführungen
+  examples: |
+    - Stadtführungen
+    - Stadtführung
+    - führungen
+    - führung
+- synonym: Theater
+  examples: |
+    - Theater
+- synonym: Tierarzt
+  examples: |
+    - Tierarzt
+    - Arzt für Tiere
+    - Hundearzt
+    - Pferdearzt
+    - Arzt für Katzen
+- synonym: Universitäten
+  examples: |
+    - Universitäten
+    - Universität
+    - Hochschulen
+    - Schulen
+    - Lerneinrichtungen
+    - Schuleinrichtungen
+- synonym: atembeschwerden
+  examples: |
+    - atembeschwerden
+    - kann schlecht atmen
+    - atemnot
+- synonym: auswurf
+  examples: |
+    - auswurf
+- synonym: bar
+  examples: |
+    - bar
+    - bars
+    - kneipe
+    - kneipen
+    - bierkneipe
+- synonym: bauchweh
+  examples: |
+    - bauchweh
+    - bauchschmerzen
+    - blähungen
+    - magen beschwerden
+    - bauch beschwerden
+- synonym: baustoffhandel
+  examples: |
+    - baustoffhandel
+- synonym: blumenläden
+  examples: |
+    - blumenläden
+    - blumenhandel
+    - floristiker
+- synonym: brennstoffhandel
+  examples: |
+    - brennstoffhandel
+- synonym: club
+  examples: |
+    - club
+    - dicos
+    - disco
+    - diskos
+    - clubs
+    - diskotheken
+    - diskothek
+    - parties
+    - party
+    - tanzveranstaltungen
+- synonym: fieber
+  examples: |
+    - fieber
+    - hohes fieber
+- synonym: gelenkschmerzen
+  examples: |
+    - gelenkschmerzen
+    - schmerzen in gelenken
+    - athrose
+    - gicht
+- synonym: geruchsverlust
+  examples: |
+    - geruchsverlust
+    - nicht riechen können
+- synonym: geschmacksverlust
+  examples: |
+    - geschmacksverlust
+    - nicht schmecken können
+- synonym: gliederschmerzen
+  examples: |
+    - gliederschmerzen
+    - schmerzen in den gliedern
+    - muskeln tuen weh
+    - schmerzen in den lymphknoten
+- synonym: gärtnerei
+  examples: |
+    - gärtnerei
+    - gärtnereien
+- synonym: jägereibedarf
+  examples: |
+    - jägereibedarf
+    - jägereihandel
+- synonym: kaminkehrer
+  examples: |
+    - kaminkehrer
+- synonym: kiefergelenkschmerzen
+  examples: |
+    - kiefergelenkschmerzen
+    - kieferschmerzen
+    - kaumuskelschmerzen
+    - kauschmerzen
+    - kaubeschwerden
+    - kiefer beschwerden
+- synonym: kiosk
+  examples: |
+    - kiosk
+    - kioske
+- synonym: kopfschmerzen
+  examples: |
+    - kopfschmerzen
+    - kopfweh
+    - kopf weh
+    - kopf schmerz
+- synonym: kurzatmig
+  examples: |
+    - kurzatmig
+    - kurzatmigkeit
+    - kurzen atem
+- synonym: migräne
+  examples: |
+    - migräne
+- synonym: museen
+  examples: |
+    - museen
+    - museum
+    - kunsthallen
+- synonym: muskelschmerzen
+  examples: |
+    - muskelschmerzen
+    - schmerzen in muskel
+- synonym: müdigkeit
+  examples: |
+    - müdigkeit
+    - müde
+    - trübe
+    - schläfrig
+    - K.O.
+    - KO
+    - K.O
+    - kaputt
+    - schlapp
+    - schlappheit
+    - schlaffheit
+    - abgeschlagenheit
+- synonym: pferdeställe
+  examples: |
+    - pferdeställe
+    - reitställe
+    - reitstall
+    - reitverein
+- synonym: reinigungen
+  examples: |
+    - reinigungen
+    - reinigung
+- synonym: schnupfen
+  examples: |
+    - schnupfen
+    - nase verstopft
+    - verstopfte nase
+- synonym: schüttelfrost
+  examples: |
+    - schüttelfrost
+- synonym: sportplatz
+  examples: |
+    - sportplatz
+    - spielplatz
+    - sportplätze
+    - freisportanlage
+    - freisportanlagen
+- synonym: stördienste
+  examples: |
+    - stördienste
+    - stördienst
+    - schlüsseldienst
+- synonym: tagungsräume
+  examples: |
+    - tagungsräume
+    - tagungen
+    - veranstaltungsräume
+- synonym: tanzschule
+  examples: |
+    - tanzschule
+    - hartung
+    - bäulke
+    - tanzschulen
+    - tanzeinrichtungen
+- synonym: taxi
+  examples: |
+    - taxi
+- synonym: tierpark
+  examples: |
+    - tierpark
+    - zoos
+    - zoo
+    - streichelzoo
+    - tierpärke
+- synonym: vergnügungsstätten
+  examples: |
+    - vergnügungsstätten
+- synonym: verschleimt
+  examples: |
+    - verschleimt
+    - schleim
+    - schleim im hals
+- synonym: wachsalons
+  examples: |
+    - wachsalons
+    - waschsalon
+- synonym: weinhändler
+  examples: |
+    - weinhändler
+    - Spirituosenläden
+    - Süßwarengeschäfte
+    - Feinkostgeschäfte
+    - weinhandel
+    - spirituosenladen
+    - süßwarenhandel
+- synonym: zeitungsverkauft
+  examples: |
+    - zeitungsverkauft
+    - zeitschriftenverkauf
+    - zeitungsverkauf
+- synonym: Übelkeit
+  examples: |
+    - Übelkeit
+    - erbrechen
+    - kotzen
+    - schlecht fühlen
+    - übel
+    - schlecht
+- synonym: öffentliche Einrichtungen
+  examples: |
+    - öffentliche einrichtungen
+    - Krankenhaus
+    - Ärztliche Einrichtungen
+    - Sanitätshäuser
+    - krankenhäuser
+    - ärtzliche einrichtungen
+    - bereitschafts arzt
+    - hospital
+    - hospilats
+    - hospitäle
+- lookup: Betriebe
+  examples: |
+    - Apotheke
+    - Arzneiausgabe
+    - Apotheken
+    - Arzneiläden
+    - Pharmaläden
+    - Pharmazeuten
+    - Dienstleistungsanbieter
+    - Dienstleistungen
+    - Schule
+    - Kindergarten
+    - Dienstleister
+    - friseur
+    - tabakladen
+    - tankstelle
+    - Optiker
+    - Sparkasse
+    - Online Händler
+    - Online Handel
+    - Stadtführungen
+    - Kindergärten
+    - Kitas
+    - Kita
+    - tankstellen
+    - tankstellenshops
+    - öffentliche einrichtungen
+    - Krankenhaus
+    - Ärztliche Einrichtungen
+    - Sanitätshäuser
+    - krankenhäuser
+    - ärtzliche einrichtungen
+    - bereitschafts arzt
+    - hospital
+    - hospilats
+    - hospitäle
+    - Gastronomie
+    - Restaurants
+    - McDonals
+    - Burger King
+    - Döner
+    - Pizzeria
+    - Restaurant
+    - Eisdiele
+    - Café
+    - Cafe
+    - Clubs
+    - Disko
+    - Diskothek
+    - Disco
+    - Imbissbuden
+    - Hotels
+    - Unterkunft
+    - Jugendherrberge
+    - Zeltplatz
+    - Campingplatz
+    - campingbetriebe
+    - unterkünfte
+    - ferienhäuser
+    - ferienwohnungen
+    - hotel
+    - hotelkette
+    - hotelketten
+    - Einzelhandel
+    - DM
+    - Drogeriemarkt
+    - Einkaufsladen
+    - Läden
+    - Baumarkt
+    - Tierbedarf
+    - Fressnapf
+    - Tierläden
+    - Kleidungsladen
+    - drogerien
+    - douglas
+    - kik
+    - klamottenläden
+    - einzelhändler
+    - Banken
+    - Finanzhäuser
+    - Kredithäuser
+    - Geldhäuser
+    - Baumärkte
+    - Gartengeschäfte
+    - Gartenläden
+    - Rossmann
+    - OBI
+    - Bäcker
+    - bäckereien
+    - backstuben
+    - Universitäten
+    - Universität
+    - Hochschulen
+    - Schulen
+    - Lerneinrichtungen
+    - Schuleinrichtungen
+    - Medizinische einrichtung
+    - medizinische einrichtungen
+    - weinhändler
+    - Spirituosenläden
+    - Süßwarengeschäfte
+    - Feinkostgeschäfte
+    - weinhandel
+    - spirituosenladen
+    - süßwarenhandel
+    - Lebensmittelhandel
+    - lebensmittelhändler
+    - denns
+    - biomärkte
+    - biomarkt
+    - penny
+    - kupsch
+    - edeka
+    - Aldi
+    - norma
+    - lidl
+    - teegut
+    - rewe
+    - Getränkemärkte
+    - getränkemarkt
+    - getränkehandel
+    - getränkehändler
+    - getränkeladen
+    - Hörgeräteakuster
+    - akustiker
+    - hörgerätsakustiker
+    - hörgerätshandel
+    - hörgerätsbetrieb
+    - Deutsche Post
+    - deutsche post AG
+    - post
+    - DHL
+    - Hermes
+    - post stellen
+    - Paketstationen
+    - reinigungen
+    - reinigung
+    - brennstoffhandel
+    - kiosk
+    - kioske
+    - jägereibedarf
+    - jägereihandel
+    - Landhanel
+    - düngergeschäfte
+    - KFZ-Werkstätten
+    - KFZ
+    - Werkstätten
+    - Ersatzteilhandel
+    - KFZ werkstatt
+    - Autovermietstationen
+    - sixt
+    - Automiet stationen
+    - Autovermietstation
+    - blumenläden
+    - blumenhandel
+    - floristiker
+    - gärtnerei
+    - gärtnereien
+    - baustoffhandel
+    - Großhandel
+    - metro
+    - selgros
+    - kaminkehrer
+    - Baustellen
+    - Baugewerbe
+    - Lieferung
+    - lieferungen
+    - montage
+    - stördienste
+    - stördienst
+    - schlüsseldienst
+    - Gebäudereiniger
+    - fassadenreiniger
+    - denkmalreiniger
+    - taxi
+    - Fahrradreparatur
+    - Fahrradersatzteilhandel
+    - fahrradhandel
+    - zeitungsverkauft
+    - zeitschriftenverkauf
+    - zeitungsverkauf
+    - wachsalons
+    - waschsalon
+    - pferdeställe
+    - reitställe
+    - reitstall
+    - reitverein
+    - Arztpraxis
+    - Arzt
+    - Zahnarzt
+    - Frauenarzt
+    - Chiruge
+    - Orthopäde
+    - Ärzte
+    - Ärztehaus
+    - Psychologe
+    - Physiologe
+    - Tierarzt
+    - Arzt für Tiere
+    - Hundearzt
+    - Pferdearzt
+    - Arzt für Katzen
+- lookup: Freizeiteinrichtungen
+  examples: |
+    - Sauna
+    - Badeanstalten
+    - Therme
+    - Thermalbäder
+    - Bäder
+    - Schwimmbäder
+    - Schwimmbad
+    - wellnesszentren
+    - wellnesshäuser
+    - wellness
+    - spa
+    - nautiland
+    - wolfgang adami bad
+    - sandermare
+    - dallenbergbad
+    - dalle
+    - nauti
+    - adami bad
+    - Kino
+    - Kinos
+    - Cinemaxx
+    - Cinewolrd
+    - cineworld
+    - zentralkino
+    - Theater
+    - tagungsräume
+    - tagungen
+    - veranstaltungsräume
+    - club
+    - dicos
+    - disco
+    - diskos
+    - clubs
+    - diskotheken
+    - diskothek
+    - parties
+    - party
+    - tanzveranstaltungen
+    - bar
+    - bars
+    - kneipe
+    - kneipen
+    - bierkneipe
+    - Spielhallen
+    - Casinos
+    - casino
+    - Bordellbetriebe
+    - Bordell
+    - puff
+    - bordel
+    - bordellbetrieb
+    - museen
+    - museum
+    - kunsthallen
+    - Stadtführungen
+    - Stadtführung
+    - führungen
+    - führung
+    - Sporthallen
+    - fitnesstudios
+    - fitness
+    - fitnessräume
+    - MCfit
+    - Fitone
+    - fit one
+    - mc fit
+    - fitti
+    - gyms
+    - yogastudios
+    - yoga studio
+    - yoga einrichtungen
+    - turnhallen
+    - dreifachturnhallen
+    - box
+    - fitness box
+    - reha sport
+    - livestyle
+    - kraftmühle
+    - crossfit würzburg
+    - mainfitness
+    - sportplatz
+    - spielplatz
+    - sportplätze
+    - freisportanlage
+    - freisportanlagen
+    - Bibliotheken
+    - bibliothek
+    - bücherei
+    - bücherein
+    - vergnügungsstätten
+    - tanzschule
+    - hartung
+    - bäulke
+    - tanzschulen
+    - tanzeinrichtungen
+    - tierpark
+    - zoos
+    - zoo
+    - streichelzoo
+    - tierpärke
+- lookup: Symptome
+  examples: |
+    - Husten
+    - Huste
+    - hust
+    - keuchhusten
+    - hustenanfall
+    - hustenanfälle
+    - trockener husten
+    - Niesen
+    - nisen
+    - Durchfall
+    - verstopfungen
+    - dünnschiss
+    - dünnschiß
+    - kopfschmerzen
+    - kopfweh
+    - kopf weh
+    - kopf schmerz
+    - gliederschmerzen
+    - schmerzen in den gliedern
+    - muskeln tuen weh
+    - schmerzen in den lymphknoten
+    - Nase läuft
+    - laufende nase
+    - Halsschmerzen
+    - schmerzen im hals
+    - halschmerzen
+    - kratzigen hals
+    - halsweh
+    - hals entzündet
+    - entzündeter hals
+    - hals beschwerden
+    - atembeschwerden
+    - kann schlecht atmen
+    - atemnot
+    - verschleimt
+    - schleim
+    - schleim im hals
+    - Rachenentzüngung
+    - Rachenendzündung
+    - Rachenentzuendung
+    - fieber
+    - hohes fieber
+    - bauchweh
+    - bauchschmerzen
+    - blähungen
+    - magen beschwerden
+    - bauch beschwerden
+    - schnupfen
+    - nase verstopft
+    - verstopfte nase
+    - kurzatmig
+    - kurzatmigkeit
+    - kurzen atem
+    - migräne
+    - müdigkeit
+    - müde
+    - trübe
+    - schläfrig
+    - K.O.
+    - KO
+    - K.O
+    - kaputt
+    - schlapp
+    - schlappheit
+    - schlaffheit
+    - abgeschlagenheit
+    - Lundenentzündung
+    - Lungenentzündung
+    - geruchsverlust
+    - nicht riechen können
+    - geschmacksverlust
+    - nicht schmecken können
+    - gelenkschmerzen
+    - schmerzen in gelenken
+    - athrose
+    - gicht
+    - muskelschmerzen
+    - schmerzen in muskel
+    - schüttelfrost
+    - Übelkeit
+    - erbrechen
+    - kotzen
+    - schlecht fühlen
+    - übel
+    - schlecht
+    - kiefergelenkschmerzen
+    - kieferschmerzen
+    - kaumuskelschmerzen
+    - kauschmerzen
+    - kaubeschwerden
+    - kiefer beschwerden
+    - auswurf

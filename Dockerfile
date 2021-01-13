@@ -26,7 +26,7 @@ RUN apt-get update && \
 # Install recent CMake.
 RUN apt-get install -y wget && \
         wget -nv -O - https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1-Linux-x86_64.tar.gz | tar xzf - --strip-components=1 -C /usr && \
-        apt remove -y wget
+        apt-get remove -y wget
 
 # Install numpy/scipy/pytorch for python tests.
 RUN pip install numpy scipy torch
@@ -46,10 +46,14 @@ RUN make -C build -j8
 RUN cd build/faiss/python && python setup.py install
 
 # Installation of dialog-de
+RUN apt-get install -y libcusparse9.1
 WORKDIR /tmp/unique_for_install
 COPY . /tmp/unique_for_install/dialog-de
 WORKDIR /tmp/unique_for_install/dialog-de
 RUN pip install -r requirements.txt
 RUN pip install -e .
+RUN python -m spacy download de_core_news_md
+RUN python -m spacy link de_core_news_md de
+RUN rasa telemetry disable
 WORKDIR /workspace
 

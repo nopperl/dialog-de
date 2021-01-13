@@ -64,6 +64,16 @@ nvidia-docker run -v `pwd`:/workspace:rw -it dialog-de bash
 ./train_model --amp --kmeans
 ```
 
+The resulting model will be stored in `save/pretrain/ToD-BERT-German-JNT`. The latest checkpoint can should be used for the chatbot demo. In order to do this, find the latest checkpoint (e.g. using `ls save/pretrain/ToD-BERT-German-JNT`) and (optionally) convert it into a tensorflow checkpoint:
+
+```
+./convert_model.py save/pretrain/ToD-BERT-German-JNT/[INSERT_CHECKPOINT_DIR]
+```
+
+Finally, the checkpoint directory needs to specified in the `demo/config.yml` file (replace all occurences of `[INSERT_CHECKPOINT_DIR]`). Then, the demo can be trained using `./train_demo.sh` and run using `./run_demo.sh`. The models can also be evaluated using `./evaluate_demo.sh`.
+
+The chatbot data was adapted from: https://github.com/zdi-mainfranken/corona-chatbot.
+
 [0]: https://arxiv.org/abs/2010.13912
 [1]: https://arxiv.org/abs/1911.03688
 [2]: https://arxiv.org/abs/2003.04807
