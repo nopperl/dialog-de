@@ -13,7 +13,7 @@ pipeline:
     model_weights: ../save/pretrain/ToD-BERT-German-JNT/[INSERT_CHECKPOINT_DIR]
   - name: DIETClassifier
     entity_recognition: False
-    epochs: 50
+    epochs: 100
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
