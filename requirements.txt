@@ -13,4 +13,3 @@ simplejson==3.17.2
 tensorboardX==2.1
 git+https://github.com/nikuya3/rasa.git@df6734e
 spacy==2.2.4
-tensorflow==2.4.0

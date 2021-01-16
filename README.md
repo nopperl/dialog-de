@@ -46,7 +46,7 @@ requires heavy manual heuristics in the data collection.
 * preparing the presentation of your work: 1
 
 ## Usage
-Clone the repo using the `--recursive` flag or issue `git submodule update`. Then:
+Clone the repo using the `--recursive` flag or issue `git submodule update --init --recursive`. Then:
 
 ```
 pip install -r requirements.txt
@@ -60,7 +60,7 @@ Alternatively, the provided `Dockerfile` can be used to skip the first two steps
 
 ```
 nvidia-docker build -t dialog-de .
-nvidia-docker run -v `pwd`:/workspace:rw -it dialog-de bash
+nvidia-docker run -v `pwd`:/workspace:rw --gpus all -it dialog-de bash
 ./train_model --amp --kmeans
 ```
 

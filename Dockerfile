@@ -1,9 +1,12 @@
+FROM nvcr.io/nvidia/cuda:11.0.3-cudnn8-devel-ubuntu20.04
+
+RUN apt-get update
+RUN apt-get install -y python3 python3-pip
+RUN ln -s $(which pip3) /usr/bin/pip
+RUN ln -s $(which python3) /usr/bin/python
+RUN pip install torch==1.7.0+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+
 # Apex installation part adapted from https://github.com/NVIDIA/apex/blob/master/examples/docker/Dockerfile
-# Base image must at least have pytorch and CUDA installed.
-ARG BASE_IMAGE=pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
-FROM $BASE_IMAGE
-ARG BASE_IMAGE
-RUN echo "Installing Apex on top of ${BASE_IMAGE}"
 # make sure we don't overwrite some existing directory called "apex"
 WORKDIR /tmp/unique_for_install
 # uninstall Apex if present, twice to make absolutely sure :)
@@ -46,11 +49,11 @@ RUN make -C build -j8
 RUN cd build/faiss/python && python setup.py install
 
 # Installation of dialog-de
-RUN apt-get install -y libcusparse9.1
 WORKDIR /tmp/unique_for_install
 COPY . /tmp/unique_for_install/dialog-de
 WORKDIR /tmp/unique_for_install/dialog-de
 RUN pip install -r requirements.txt
+RUN pip install https://github.com/davidenunes/tensorflow-wheels/releases/download/r2.3.cp38.gpu/tensorflow-2.3.0-cp38-cp38-linux_x86_64.whl
 RUN pip install -e .
 RUN python -m spacy download de_core_news_md
 RUN python -m spacy link de_core_news_md de
