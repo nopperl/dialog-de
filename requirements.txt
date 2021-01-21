@@ -4,7 +4,6 @@ fake-useragent==0.1.11
 torch==1.7.0
 six==1.15.0
 numpy==1.19.5
-tqdm==4.31.1
 transformers==4.2.0
 nltk==3.5
 ptvsd==4.3.2
