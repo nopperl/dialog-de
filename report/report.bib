@@ -1,0 +1,92 @@
+@inproceedings{wu-xiong-2020-probing,
+    title = "Probing Task-Oriented Dialogue Representation from Language Models",
+    author = "Wu, Chien-Sheng  and
+      Xiong, Caiming",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.409",
+    doi = "10.18653/v1/2020.emnlp-main.409",
+    pages = "5036--5051",
+    abstract = "This paper investigates pre-trained language models to find out which model intrinsically carries the most informative representation for task-oriented dialogue tasks. We approach the problem from two aspects: supervised classifier probe and unsupervised mutual information probe. We fine-tune a feed-forward layer as the classifier probe on top of a fixed pre-trained language model with annotated labels in a supervised way. Meanwhile, we propose an unsupervised mutual information probe to evaluate the mutual dependence between a real clustering and a representation clustering. The goals of this empirical paper are to 1) investigate probing techniques, especially from the unsupervised mutual information aspect, 2) provide guidelines of pre-trained language model selection for the dialogue research community, 3) find insights of pre-training factors for dialogue application that may be the key to success.",
+}
+
+@inproceedings{wu-etal-2020-tod,
+	title = "{TOD}-{BERT}: Pre-trained Natural Language Understanding for Task-Oriented Dialogue",
+	author = "Wu, Chien-Sheng  and
+	Hoi, Steven C.H.  and
+	Socher, Richard  and
+	Xiong, Caiming",
+	booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+	month = nov,
+	year = "2020",
+	address = "Online",
+	publisher = "Association for Computational Linguistics",
+	url = "https://www.aclweb.org/anthology/2020.emnlp-main.66",
+	doi = "10.18653/v1/2020.emnlp-main.66",
+	pages = "917--929",
+	abstract = "The underlying difference of linguistic patterns between general text and task-oriented dialogue makes existing pre-trained language models less useful in practice. In this work, we unify nine human-human and multi-turn task-oriented dialogue datasets for language modeling. To better model dialogue behavior during pre-training, we incorporate user and system tokens into the masked language modeling. We propose a contrastive objective function to simulate the response selection task. Our pre-trained task-oriented dialogue BERT (TOD-BERT) outperforms strong baselines like BERT on four downstream task-oriented dialogue applications, including intention recognition, dialogue state tracking, dialogue act prediction, and response selection. We also show that TOD-BERT has a stronger few-shot ability that can mitigate the data scarcity problem for task-oriented dialogue.",
+}
+
+@inproceedings{henderson-etal-2020-convert,
+	title = "{C}onve{RT}: Efficient and Accurate Conversational Representations from Transformers",
+	author = "Henderson, Matthew  and
+	Casanueva, I{\~n}igo  and
+	Mrk{\v{s}}i{\'c}, Nikola  and
+	Su, Pei-Hao  and
+	Wen, Tsung-Hsien  and
+	Vuli{\'c}, Ivan",
+	booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+	month = nov,
+	year = "2020",
+	address = "Online",
+	publisher = "Association for Computational Linguistics",
+	url = "https://www.aclweb.org/anthology/2020.findings-emnlp.196",
+	doi = "10.18653/v1/2020.findings-emnlp.196",
+	pages = "2161--2174",
+	abstract = "General-purpose pretrained sentence encoders such as BERT are not ideal for real-world conversational AI applications; they are computationally heavy, slow, and expensive to train. We propose ConveRT (Conversational Representations from Transformers), a pretraining framework for conversational tasks satisfying all the following requirements: it is effective, affordable, and quick to train. We pretrain using a retrieval-based response selection task, effectively leveraging quantization and subword-level parameterization in the dual encoder to build a lightweight memory- and energy-efficient model. We show that ConveRT achieves state-of-the-art performance across widely established response selection tasks. We also demonstrate that the use of extended dialog history as context yields further performance gains. Finally, we show that pretrained representations from the proposed encoder can be transferred to the intent classification task, yielding strong results across three diverse data sets. ConveRT trains substantially faster than standard sentence encoders or previous state-of-the-art dual encoders. With its reduced size and superior performance, we believe this model promises wider portability and scalability for Conversational AI applications.",
+}
+
+@inproceedings{casanueva-etal-2020-efficient,
+	title = "Efficient Intent Detection with Dual Sentence Encoders",
+	author = "Casanueva, I{\~n}igo  and
+	Tem{\v{c}}inas, Tadas  and
+	Gerz, Daniela  and
+	Henderson, Matthew  and
+	Vuli{\'c}, Ivan",
+	booktitle = "Proceedings of the 2nd Workshop on Natural Language Processing for Conversational AI",
+	month = jul,
+	year = "2020",
+	address = "Online",
+	publisher = "Association for Computational Linguistics",
+	url = "https://www.aclweb.org/anthology/2020.nlp4convai-1.5",
+	doi = "10.18653/v1/2020.nlp4convai-1.5",
+	pages = "38--45",
+	abstract = "Building conversational systems in new domains and with added functionality requires resource-efficient models that work under low-data regimes (i.e., in few-shot setups). Motivated by these requirements, we introduce intent detection methods backed by pretrained dual sentence encoders such as USE and ConveRT. We demonstrate the usefulness and wide applicability of the proposed intent detectors, showing that: 1) they outperform intent detectors based on fine-tuning the full BERT-Large model or using BERT as a fixed black-box encoder on three diverse intent detection data sets; 2) the gains are especially pronounced in few-shot setups (i.e., with only 10 or 30 annotated examples per intent); 3) our intent detectors can be trained in a matter of minutes on a single CPU; and 4) they are stable across different hyperparameter settings. In hope of facilitating and democratizing research focused on intention detection, we release our code, as well as a new challenging single-domain intent detection dataset comprising 13,083 annotated examples over 77 intents.",
+}
+
+@InProceedings{lee2019multi-domain,
+	author = {Lee, Sungjin and Schulz, Hannes and Atkinson, Adam and Gao, Jianfeng and Suleman, Kaheer and El Asri, Layla and Adada, Mahmoud and Huang, Minlie and Sharma, Shikhar and Tay, Wendy and Li, Xiujun},
+	title = {Multi-Domain Task-Completion Dialog Challenge},
+	booktitle = {Dialog System Technology Challenges 8},
+	year = {2019},
+	month = {March},
+	abstract = {This challenge intends to foster progress in two important aspects of dialog systems: dialog complexity and scaling to new domains. First, there is an increasing interest in building complex bots that span over multiple sub-domains to accomplish a complex user goal such as travel planning which may include hotel, restaurant, attraction and so on. To advance state-of-the-art technologies for handling complex dialogs, we over a timely task focusing on multi-domain end-to-end task completion dialog. Second, neural dialog systems require very large datasets to learn to output consistent and grammatically-correct sentences. This
+	makes it extremely hard to scale out the system to new domains with limited in-domain data. With this challenge, our goal is to investigate whether sample complexity can decrease with time, i.e., if a dialog system that was trained on a large corpus can learn to converse about a new domain given a much smaller in-domain corpus.},
+	url = {https://www.microsoft.com/en-us/research/publication/multi-domain-task-completion-dialog-challenge/},
+}
+
+@inproceedings{distilbert,
+	author    = {Victor Sanh and
+	Lysandre Debut and
+	Julien Chaumond and
+	Thomas Wolf},
+	title     = {DistilBERT, a distilled version of {BERT:} smaller, faster, cheaper
+	and lighter},
+	booktitle = {The 5th Workshop on Energy Efficient Machine Learning and Cognitive Computing},
+	journal	  = {NIPS},
+	year      = {2019},
+	url       = {http://arxiv.org/abs/1910.01108},
+}
